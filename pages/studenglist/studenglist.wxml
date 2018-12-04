@@ -1,0 +1,37 @@
+<view class='search'>
+  <view class='search-body' wx:for="{{studentlist}}" wx:key="index">
+      <view class='best-cont' >
+        <view class='cont-zhanye'>
+          <text class='user'>姓名：{{item.username}}</text>
+          <text class='gongzuo'>招生老师：{{item.zsls}}</text>
+          <view class='aa'></view>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-banji'></icon>
+          <text class='text-lei1'>性别：</text>
+          <text class='text-lei2'>{{item.sex==1 ? "男" : "女"}}</text>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-xingming1'></icon>
+          <text class='text-lei1'>手机号：</text>
+          <text class='text-lei2'>{{item.tel}}</text>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-xinzi'></icon>
+          <text class='text-lei1'>学历：</text>
+          <text class='text-lei2'>{{item.education==1 ? "小学" : item.education==2 ? "初中" :  item.education==3 ? "高中" : item.education==4 ? "大学" : "其他"}}</text>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-hujidi'></icon>
+          <text class='text-lei1'>身份证号：</text>
+          <text class='text-lei2'>{{item.card}}</text>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-hujidi'></icon>
+          <text class='text-lei1'>时间：</text>
+          <text class='text-lei2'>{{item.date}}</text>
+        </view>
+      </view>
+   </view>
+   <view class='dixian' >———— 我是有底线的 ————</view>
+</view>

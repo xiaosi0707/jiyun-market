@@ -1,0 +1,77 @@
+<view class='index'>
+  <view class='welcome'>
+    <view class='scroll'><text class='iconfont icon-huanyingye'> Hi , {{user}} ！欢迎您来到这个温馨的家园</text></view>
+  </view>
+  <!-- 轮播 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key='index'>
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+ <!--导航  -->
+  <view class='nav'>
+    <view class='nav-item' wx:for="{{navlist}}" wx:key="index" bindtap='tap' id = "{{item.title}}">
+     <icon class="'iconfont'+{{item.icon}} nav-pic"></icon><text class='title'>{{item.title}}</text>
+    </view>
+   
+  </view>
+<!--集团通知 集团新闻 -->
+<view class='jituan'>
+  <view class='jituan-l' style='background:#f7774a'>
+  <navigator class='navtiao2'url='../list/list?title=集团通知'>
+    <view class='l-cont'>
+       <text class='l-cont-text' wx:for="{{tongzhiData}}" wx:key="index">{{item.bt}}</text>
+       <icon class='iconfont icon-iconfontgengduo'></icon>
+    </view>
+    <view class='l-pic'>
+      <icon class='iconfont icon-tongzhi'></icon>
+      <text class='l-pic-title'>集团通知</text>
+    </view>
+    </navigator>
+  </view>
+  <view class='jituan-r' style='background:#c066a6'>
+   <navigator url='../list/list?title=集团新闻' class='navtiao2'>
+      <view class='r-cont'>
+        <text class='r-cont-text'  wx:for="{{newsData}}" wx:key="index">{{item.bt}}</text>
+        <icon class='iconfont icon-iconfontgengduo'></icon>
+      </view>
+      <view class='r-pic'>
+          <icon class='iconfont icon-xinwen'></icon>
+          <text class='r-pic-title'>集团新闻</text>
+        </view>
+    </navigator>
+  </view>
+</view>
+<!--优惠活动 改革制度 -->
+<view class='jituan2'>
+  <view class='jituan-r' style='background:#fa6567'>
+  <navigator class='navtiao2' url='../list/list?title=优惠活动'>
+    <view class='r-cont'>
+       <text class='r-cont-text' wx:for="{{youhuiData}}" wx:key="index">{{item.bt}}</text>
+       <icon class='iconfont icon-iconfontgengduo'></icon>
+    </view>
+    <view class='r-pic'>
+      <icon class='iconfont icon-huodong'></icon>
+      <text class='r-pic-title'>优惠活动</text>
+    </view>
+   </navigator>
+   </view>
+  <view class='jituan-l jituan2-l' style='background:#f5ad09'>
+    <navigator class='navtiao2' url='../list/list?title=政策制度'>
+      <view class='l-cont'>
+        <text class='l-cont-text' wx:for="{{zhengceData}}" wx:key="index">{{item.bt}}</text>
+        <icon class='iconfont icon-iconfontgengduo'></icon>
+      </view>
+      <view class='l-pic'>
+          <icon class='iconfont icon-guizhangzhidu'></icon>
+          <text class='l-pic-title'>政策制度</text>
+        </view>
+    </navigator>
+  </view>
+</view>
+<view class='dixian'>———— 我是有底线的 ————</view>
+</view>
+
+

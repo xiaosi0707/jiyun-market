@@ -1,0 +1,89 @@
+view,text,input{
+  box-sizing: border-box;
+}
+.logs{
+  box-sizing: border-box;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+   height: 100vw;
+ }
+.jxpic{
+  top: 0;
+  width: 200vw;
+  height: 100vh;
+  float: left;
+  position: absolute;
+  z-index: -2;
+}
+.body{
+  flex: 1;
+  padding-left: 65rpx;
+  padding-right: 65rpx;
+  box-sizing: border-box;
+}
+.name{
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+  line-height: 300rpx;
+  font-size: 58rpx;
+  color: #ffffff;
+}
+.content{
+  width: 100%;
+  height: 800rpx;
+  position: relative;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.mess{
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  left: 0;
+  top: 80rpx;
+  padding: 60rpx;
+}
+.user{
+  width: 100%;
+  padding: 20rpx 0rpx;
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid #999; 
+  align-items: center;
+
+}
+.icon-xingming,.icon-mima,.icon-shoujihao{
+  color: #ff2272;
+  font-size: 50rpx;
+
+}
+input{
+  -webkit-box-flex: 1;
+ padding-left: 40rpx;
+  line-height: 70rpx;
+  height: 70rpx;
+  box-sizing: border-box;
+}
+.icon-mima{
+  color: #ff7812;
+}
+.icon-shoujihao{
+  color: #7183ff;
+}
+.tishi{
+  line-height: 30rpx;
+  font-size: 25rpx;
+  color: #fa3d3d;
+}
+button{
+  margin-top: 40rpx; 
+  background: #7183ff;
+  color: #fff;
+  height: 100rpx;
+}

@@ -1,0 +1,28 @@
+<view class="logs">
+  <image src='./pic.jpg' class='jxpic'></image> 
+  <view class="name"><text>积云信息平台市场专用</text></view>
+  <view class='body'>
+    <view class="content">
+      <image src='./1_03.png'></image>
+      <view class='mess'>
+        <view class='user'>
+          <icon class='iconfont icon-xingming'></icon>
+          <input type='text' placeholder='请输入姓名' bindinput='name'></input>
+         </view>
+          <view class='user'>
+          <icon class='iconfont icon-shoujihao'></icon>
+          <input type='number' placeholder='请输入手机号' maxlength='11' bindinput='tel'></input>
+         </view>
+          <view class='user'>
+          <icon class='iconfont icon-mima'></icon>
+          <input type='password' placeholder='请输入密码' bindinput='pass'></input>
+         </view>
+         <!-- <text class='tishi'>请输入姓名</text> -->
+         <button bindtap='login'>提 交</button>
+          <!-- <navigator url="../index/index">跳转到新页面</navigator> -->
+      </view>
+    </view>
+  </view>
+  
+ 
+</view>

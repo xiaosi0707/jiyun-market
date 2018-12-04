@@ -1,0 +1,44 @@
+<view class='baoming'>
+  <view class='head'><icon class='iconfont icon-name'></icon></view>
+  <view class='cont'>
+    <icon class='iconfont icon-mingzi iconpic'></icon>
+    <input type='text' placeholder='姓名' bindinput='name'></input>
+    <!-- <text class='mess'>{{mess}}</text> -->
+  </view>
+  <view class='cont'>
+    <icon class='iconfont icon-xingbie1 iconpic'></icon>
+    <input type='text' placeholder='性别' bindtap='sex' class='body-input' wx:if="{{!sex}}"></input>
+    <text class='body-text'>{{sex}}</text>
+  </view>
+  <view class='cont'>
+    <icon class='iconfont icon-shoujihao1 iconpic'></icon>
+    <input type='number' placeholder='手机号' maxlength='11' bindinput='tel'></input>
+    <text class='mess'>{{mess}}</text>
+  </view>
+  <view class='cont'>
+    <icon class='iconfont icon-credentials_icon iconpic'></icon>
+    <input type='idcard' placeholder='身份证' maxlength='18' bindinput='card'></input>
+    <!-- <text class='mess'>{{mess}}</text> -->
+  </view>
+  <view class='cont'>
+    <icon class='iconfont icon-xueli iconpic'></icon>
+    <input type='text' placeholder='学历' class='body-input' bindtap='xueli'  wx:if="{{!xueli}}"></input>
+    <text class='body-text'>{{xueli}}</text>
+  </view>
+   <view class='cont'>
+      <icon class='iconfont icon-laoshi iconpic'></icon>
+      <input type='text' placeholder='招生老师' class='body-input' bindinput='teach'></input>
+      <!-- <text class='mess'>{{mess}}</text> -->
+      <!-- <text class='body-text'></text> -->
+    </view>
+    <view class='cont'>
+      <icon class='iconfont icon-laoshi iconpic'></icon>
+      <input type='text' placeholder='日期' class='body-input' wx:if="{{!date}}"></input>
+      <text class='body-text'>{{date}}</text>
+       <picker class="weui-btn" mode="date" bindchange="bindDateChange" start="2018-00-00" end="2020-00-00">
+         <button type="default" class='btn'>日期选择器</button>
+       </picker>
+    </view>
+  <view class='zhuce' bindtap='zhuce'>注  册</view>
+  <view class='tongyi'>已阅读并同意《积云用户协议》</view>
+</view>

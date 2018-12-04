@@ -1,0 +1,46 @@
+<view class='search'>
+  <view class='head'>
+    <image src='./01.jpg' class='img'></image>
+    <view class='head-cont'>
+      <text class='cont-title'>企查查，让商业更透明</text>
+      <text class='cont-stitle'>Enquire about student employment</text>
+      <view class='cont-search'>
+        <icon class='iconfont icon-sousuo'></icon>
+        <input type='text' class='cont-txt' placeholder='请输入学生姓名' bindinput='getval'></input>
+        <text class='search-btn' bindtap='search'>搜 索</text>
+      </view>
+    </view>
+  </view>
+  <!-- 查内容 -->
+  <view class='search-body'>
+      <view class='best-cont' wx:for="{{searchdata}}" wx:key="index">
+        <view class='cont-zhanye'>
+          <text class='user'>姓名：{{item.sname}}</text>
+          <text class='gongzuo'>是否工作：{{item.jstate}}</text>
+          <view class='aa'></view>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-banji'></icon>
+          <text class='text-lei1'>专业：</text>
+          <text class='text-lei2'>{{item.bname}}</text>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-xingming1'></icon>
+          <text class='text-lei1'>班级：</text>
+          <text class='text-lei2'>{{item.cname}}</text>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-xinzi'></icon>
+          <text class='text-lei1'>薪资：</text>
+          <text class='text-lei2'>{{item.jsalary}}</text>
+        </view>
+        <view class='cont-text'>
+          <icon class='iconfont icon-hujidi'></icon>
+          <text class='text-lei1'>户籍：</text>
+          <text class='text-lei2'>{{item.saddress}}</text>
+        </view>
+      </view>
+   </view>
+  <view class='tishi' wx:if="{{!searchdata.length}}">—— 锄禾日当午，上学真辛苦 ——</view>
+   <view class='dixian' wx:if="{{searchdata.length}}">———— 我是有底线的 ————</view>
+</view>

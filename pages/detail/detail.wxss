@@ -1,0 +1,3 @@
+.weui-media-box__desc{
+  margin-top: 20rpx; 
+}

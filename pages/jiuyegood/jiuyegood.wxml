@@ -1,0 +1,26 @@
+<view class='best'>
+  <view class='best-cont' wx:for="{{goodsdata}}" wx:key="index">
+    <text class='cont-zhanye'>专业：{{item.bname}}</text>
+    <view class='cont-text'>
+      <icon class='iconfont icon-banji'></icon>
+      <text class='text-lei1'>班级：</text>
+      <text class='text-lei2'>{{item.cname}}</text>
+    </view>
+    <view class='cont-text'>
+      <icon class='iconfont icon-xingming1'></icon>
+      <text class='text-lei1'>姓名：</text>
+      <text class='text-lei2'>{{item.sname}}</text>
+    </view>
+    <view class='cont-text'>
+      <icon class='iconfont icon-xinzi'></icon>
+      <text class='text-lei1'>薪资：</text>
+      <text class='text-lei2'>{{item.jsalary}}</text>
+    </view>
+    <view class='cont-text'>
+      <icon class='iconfont icon-hujidi'></icon>
+      <text class='text-lei1'>户籍：</text>
+      <text class='text-lei2'>{{item.saddress}}</text>
+    </view>
+  </view>
+  <view class='dixian'>———— 我是有底线的 ————</view>
+</view>
