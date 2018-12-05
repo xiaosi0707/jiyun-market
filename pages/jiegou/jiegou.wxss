@@ -1,27 +1,61 @@
 .checked{
-  width:30%;
-  text-align:center;
-  background-color:rgba(245,245,245,.3);
-  height:1200rpx;
+width:30%;
+text-align:center;
+background-color:rgba(245,245,245,.3);
+height:1200rpx;
+}
+.text{
+float:left;
 }
 .checked view{
-  width:100%;
-  text-align: center;
-  line-height:70rpx;
-  color:#666;
-}
-page{
-  display:flex;
+width:100%;
+text-align: center;
+line-height:70rpx;
+color:#666;
+font-size:32rpx;
 }
 .msg>view{
-  display:flex;
+display:flex;
 }
 .msg view view{
-  width:100%;
-  box-sizing:border-box;
-  text-align: center;
-  line-height:70rpx;
+width:100%;
+box-sizing:border-box;
+text-align: center;
+line-height:70rpx;
 }
 .msg{
-  width:70%;
+width:70%;
+}
+view,text,input{
+box-sizing: border-box;
+}
+.studentsearch-head{
+width: 100%;
+display: flex;
+align-items: center;
+padding: 20rpx 40rpx;
+border-bottom: 2px solid #f9f9f9;
+}
+.head-left{
+flex: 1;
+align-items: center;
+justify-content: center;
+display: flex;
+line-height: 80rpx;
+border-right: 2rpx solid #f1f1f1;
+}
+.icon-sousuo{
+font-size: 27rpx;
+color: #999;
+}
+.text{
+font-size: 27rpx;
+margin-left: 20rpx;
+height: 80rpx;
+width: 60%;
+}
+.head-right{
+font-size: 27rpx;
+color: #ff7a00;
+padding-left: 30rpx;
 }

@@ -3,51 +3,44 @@ view,icon,text,input{
 }
 .head{
   width: 100%;
-  height: 430rpx;
-  position: relative;
+  height: 330rpx;
 }
 .img{
   width: 100%;
   height: 100%;
 }
-.head-cont{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  padding-top: 90rpx;
-}
-.cont-title{
-  font-size: 43rpx;
-  color: #fff;
-  display: block;
-  line-height: 70rpx;
-}
-.cont-stitle{
-  font-size: 20rpx;
-  color: #fff;
-  display: block;
-}
+
 .cont-search{
   width: 100%;
-  height: 100rpx;
-  background: #fff;
-  margin-top: 75rpx; 
-  padding: 0rpx 20rpx;
+  background: #f1b3b9;
+  margin-top: 3rpx; 
+  padding: 20rpx 30rpx;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .icon-sousuo{
-  font-size: 35rpx;
+  font-size: 40rpx;
   width: 50rpx;
+  color: #999;
+}
+.search-left{
+  flex: 1;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 15rpx; 
+  border-radius: 20rpx;
+
 }
 .cont-txt{
   flex: 1;
   height: 100rpx;
-  font-size: 27rpx;
+  background: #fff;
+  font-size: 28rpx;
   text-align: left;
   margin-left: 20rpx; 
 }
@@ -55,8 +48,13 @@ view,icon,text,input{
   width: 100%;
   padding: 20rpx;
 }
-
-
+.search-btn{
+  border: 0rpx;
+  padding: 20rpx 10rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
 .best-cont{
   width: 100%;
   background: #fff;
@@ -68,7 +66,8 @@ view,icon,text,input{
 .cont-zhanye{
   width: 100%;
   font-size: 27rpx;
-  color: #11d1bf;
+  /* color: #11d1bf; */
+  color: #000;
   line-height: 52rpx;
   border-bottom: 1px solid #ebebeb;
   padding-left: 20rpx;
@@ -114,25 +113,9 @@ view,icon,text,input{
   text-align: center;
   color: #b3b3b3;
 }
-/* .tishi{
-  line-height: 70rpx;
-  padding: 0 40rpx;
-  text-align: left; 
-  text-indent: 60rpx;
- }  */
 .aa{
    width: 0;   
    height: 0;   
-   border-top: 60rpx solid #a5dfe0;
+   border-top: 60rpx solid #2bccff;
    border-left :60rpx solid transparent; 
-}
-.search-btn{
-  border: 0rpx;
-  background: #f1f1f1;
-  padding: 20rpx 30rpx;
-  border-radius: 10rpx;
-  color: #999;
-  font-size: 30rpx;
-  border-bottom: 1px solid #ccc; 
-  border-right: 1px solid #ccc; 
 }
