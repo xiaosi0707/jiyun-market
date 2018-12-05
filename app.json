@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/baoming/baoming",
     "pages/index/index",
+    "pages/baoming/baoming",
     "pages/logs/logs",
     "pages/studenglist/studenglist",
     "pages/jiuyesearch/jiuyesearch",

@@ -86,16 +86,16 @@ Page({
     let user = this.data.name
     let re = /^[\u4e00-\u9fa5]+$/ // 中文名字验证
     var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/; // 手机号验证
-    var userCard = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/; // 身份证验证
+    var userCard = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/; // 身份证验证
     if (!user) {
     wx.showModal({
       title: '提示',
       content: '请完善信息',
     })
-  } else if (!re.test(user) ) {
+    } else if (!re.test(user) || user.length < 2 ) {
       wx.showModal({
         title: '提示',
-        content: '请输入中文姓名',
+        content: '请输入真实姓名',
       })
     } else if (!this.data.sex || !this.data.xueli || !this.data.card) {
       wx.showModal({
