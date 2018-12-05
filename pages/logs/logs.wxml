@@ -7,17 +7,30 @@
       <view class='mess'>
         <view class='user'>
           <icon class='iconfont icon-xingming'></icon>
-          <input type='text' placeholder='请输入姓名' bindinput='name'></input>
+          <input type='text' placeholder='请输入姓名' 
+              bindfocus='onfocusName' bindblur='onblurName' >
+          </input>
          </view>
+         <view class='box' style='{{ Border }}'></view>
           <view class='user'>
           <icon class='iconfont icon-shoujihao'></icon>
-          <input type='number' placeholder='请输入手机号' maxlength='11' bindinput='tel'></input>
+          <input type='number' placeholder='请输入手机号'
+             bindfocus='onfocusNum'
+              bindblur='onblurNum' maxlength='11' >
+          </input>
          </view>
+         <view class='box' style='{{ Num }}'></view>
           <view class='user'>
           <icon class='iconfont icon-mima'></icon>
-          <input type='password' placeholder='请输入密码' bindinput='pass'></input>
+          <input type='password' 
+              placeholder='请输入密码' bindfocus='onfocusPwd' 
+              bindblur='onblurPwd'>
+          </input>
          </view>
-          <button bindtap='login'>登 录</button>
+         <view class='box' style='{{ Pwd }}'></view>
+         <!-- 提示 -->
+         <view class='login-msg'>{{ logs }}</view>
+          <button bindtap='onlogin'>登 录</button>
           <view class='tongyi'>已阅读并同意《积云用户协议》</view>
       </view>
     </view>
