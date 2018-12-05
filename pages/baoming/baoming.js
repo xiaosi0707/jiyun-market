@@ -139,9 +139,11 @@ Page({
               duration:100,
               success:function(res){
                 console.log(res)
-                wx.navigateTo({
-                  url: '../studenglist/studenglist',
-                })
+               setTimeout(() => {
+                 wx.navigateBack({
+                   delta: 1
+                 }, 1000)
+               })
               }
             })
          }else{
