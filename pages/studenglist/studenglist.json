@@ -3,5 +3,8 @@
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "已报名学生列表",
   "backgroundColor": "#eeeeee",
-  "navigationBarTextStyle": "black"
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "component-mask": "/components/loading/index"
+  }
 }

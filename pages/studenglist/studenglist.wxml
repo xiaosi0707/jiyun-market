@@ -36,3 +36,4 @@
    <view class='dixian'>———— 到底了 ————</view>
       <view class='yubao'>我要报名</view>
 </view>
+<component-mask loading = "{{loading}}"></component-mask>

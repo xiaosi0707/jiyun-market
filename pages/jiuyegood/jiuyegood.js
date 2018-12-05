@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    goodsdata:[]
+    goodsdata:[],
+    loading:true
   },
 
   /**
@@ -19,7 +20,8 @@ Page({
           let data = res.data;
           data = that.order(data);
           that.setData({
-            goodsdata:data
+            goodsdata:data,
+            loading:false
           })
         }
       })

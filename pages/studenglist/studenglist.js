@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-      studentlist:[]
+    studentlist:[],
+    loading: true
   },
   onBaoming () { // 跳转到 报名页
     wx.navigateTo({
@@ -21,7 +22,8 @@ Page({
     studeng.getstudengDataList((res) => {
       console.log(res)//有next_page_url
       this.setData({
-        studentlist:res.list.data
+        studentlist:res.list.data,
+        loading: false
       })
       console.log(this.data.studentlist)
     })
