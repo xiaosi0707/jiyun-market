@@ -1,7 +1,15 @@
 <view class='best'>
   <view class='best-cont' wx:for="{{goodsdata}}" wx:key="index">
-    <text class='cont-zhanye'>专业：{{item.bname}}</text>
-    <view class='cont-text'>
+    <view class='cont-head'>
+      <text class='cont-zhanye'>专业：{{item.bname}}</text>
+      <view class='cont-text cont-xinzi'>
+        <icon class='iconfont icon-xinzi'></icon>
+        <text class='text-lei1'>薪资：</text>
+        <text class='text-lei2'>{{item.jsalary}}</text>
+    </view>
+    </view>
+    <view class='cont-body'>
+      <view class='cont-text'>
       <icon class='iconfont icon-banji'></icon>
       <text class='text-lei1'>班级：</text>
       <text class='text-lei2'>{{item.cname}}</text>
@@ -11,12 +19,8 @@
       <text class='text-lei1'>姓名：</text>
       <text class='text-lei2'>{{item.sname}}</text>
     </view>
-    <view class='cont-text'>
-      <icon class='iconfont icon-xinzi'></icon>
-      <text class='text-lei1'>薪资：</text>
-      <text class='text-lei2'>{{item.jsalary}}</text>
     </view>
-    <view class='cont-text'>
+     <view class='cont-text cont-huji'>
       <icon class='iconfont icon-hujidi'></icon>
       <text class='text-lei1'>户籍：</text>
       <text class='text-lei2'>{{item.saddress}}</text>

@@ -28,9 +28,16 @@ view,text,input{
   height: 300rpx;
   text-align: center;
   line-height: 300rpx;
-  font-size: 1258rpx;
+  font-size: 58rpx;
   color: #ffffff;
 }
+.market{
+  font-size: 25rpx;
+  padding: 10rpx 20rpx;
+  border: 1px solid #fff;
+  border-radius: 10rpx;
+  margin-left: 20rpx; 
+  }
 .content{
   width: 100%;
   height: 800rpx;
@@ -69,6 +76,7 @@ input{
   line-height: 70rpx;
   height: 70rpx;
   box-sizing: border-box;
+  font-size: 35rpx;
 }
 .icon-mima{
   color: #ff7812;

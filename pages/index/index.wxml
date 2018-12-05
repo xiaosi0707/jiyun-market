@@ -1,7 +1,8 @@
 <view class='index'>
-  <view class='welcome'>
-    <view class='scroll'><text class='iconfont icon-huanyingye'> Hi , {{user}} ！欢迎您来到这个温馨的家园</text></view>
-  </view>
+    <view class='scroll'>
+      <text class='iconfont icon-huanyingye'></text>
+      <text class='hi'>张三，欢迎你！</text> 
+    </view>
   <!-- 轮播 -->
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}" wx:key='index'>

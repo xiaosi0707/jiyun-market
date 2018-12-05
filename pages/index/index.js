@@ -36,7 +36,7 @@ Page({
       },
       {
         title: '就业利好',
-        icon: 'icon-jiuye'
+        icon: 'icon-yeji'
       },
       {
         title: '组织结构',
@@ -44,39 +44,39 @@ Page({
       },
       {
         title: '在校查询',
-        icon: 'icon-mima'
+        icon: 'icon-zaixiaoqingkuang'
       },
       {
         title: '报名学生',
-        icon: 'icon-shoujihao'
+        icon: 'icon-iconfontshuxie'
       },
       {
         title: '就业查询',
-        icon: 'icon-xingming'
+        icon: 'icon-jiuye1'
       },
       {
         title: '业绩排名',
-        icon: 'icon-jiuye'
+        icon: 'icon-performance'
       },
       {
         title: '会议管理',
-        icon: 'icon-zuzhi'
+        icon: 'icon-huiyi'
       },
       {
         title: '工资查询',
-        icon: 'icon-mima'
+        icon: 'icon-639'
       },
       {
         title: '市场住宿',
-        icon: 'icon-shichang'
+        icon: 'icon-market'
       },
       {
         title: '费用报销',
-        icon: 'icon-xingming'
+        icon: 'icon-feiyong'
       },
       {
         title: '投诉建议',
-        icon: 'icon-jituanxinwen'
+        icon: 'icon-tousu'
       }
     ],
     newsData:[],

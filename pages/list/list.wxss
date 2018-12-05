@@ -4,11 +4,8 @@
   padding-left: 30rpx;
   padding-bottom: 30rpx;
 }
-.weui-cell__bd{
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
-  /* font-size: 33rpx; */
+.weui-cell__ft_in-access{
+  margin-left: 30rpx; 
 }
 .bigtitle{
   width: 100%;

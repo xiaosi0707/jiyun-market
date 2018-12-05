@@ -27,18 +27,18 @@
   </view>
    <view class='cont'>
       <icon class='iconfont icon-laoshi iconpic'></icon>
-      <input type='text' placeholder='招生老师' class='body-input' bindinput='teach'></input>
-      <!-- <text class='mess'>{{mess}}</text> -->
-      <!-- <text class='body-text'></text> -->
+      <input type='text' placeholder='招生老师：张三' class='body-input' bindinput='teach'></input>
+      <!-- <text class='mess'>张三</text> -->
+      <!-- <text class='body-text'>张三</text> -->
     </view>
-    <view class='cont'>
+    <!-- <view class='cont'>
       <icon class='iconfont icon-laoshi iconpic'></icon>
       <input type='text' placeholder='日期' class='body-input' wx:if="{{!date}}"></input>
       <text class='body-text'>{{date}}</text>
        <picker class="weui-btn" mode="date" bindchange="bindDateChange" start="2018-00-00" end="2020-00-00">
          <button type="default" class='btn'>日期选择器</button>
        </picker>
-    </view>
-  <view class='zhuce' bindtap='zhuce'>注  册</view>
+    </view> -->
+  <view class='zhuce' bindtap='zhuce'>报 名</view>
   <view class='tongyi'>已阅读并同意《积云用户协议》</view>
 </view>

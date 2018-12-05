@@ -2,53 +2,22 @@
 view,text,icon,image,navigator{
   box-sizing: border-box;
 }
-.welcome{
-  width: 100%;
-  height: 60rpx;
-  background: #f8f8fa;
-  line-height: 60rpx;
-  /* border-bottom: 2px solid #f1f1f1; */
-  border-top: 2px solid #f1f1f1;
-}
-@keyframes masked-animation {
-  0% {
-        background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
-      }
-  100% {
-         background-position: -100% 0;
-       }
-}
-
-.icon-huanyingye{
-  font-size: 25rpx;
-  padding-left: 40rpx;
-  color: #999;
-  background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
-            #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
-  color: transparent; 
--webkit-text-fill-color: transparent;
- -webkit-background-clip: text;         
-  background-size: 200% 100%;            
-    animation: masked-animation 4s infinite linear;
-}
 .scroll{
   width: 100%;
-  height: 100%;
-   -webkit-animation: scroll 10s infinite;
+  font-size: 10rpx;
+  line-height:  60rpx;
+   padding-left:30rpx; 
+  background: #f8f8fa;
+  border-top: 2px solid #f1f1f1;
 }
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
-  }
-   50% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-    100% {
-    -webkit-transform: translateX(0px);
-    transform: translateX(0px);
-  }
+.hi{
+  padding-left: 10rpx;
+  font-size: 20rpx; 
+  color: #40a3f6;
+}
+.icon-huanyingye{
+  color:#40a3f6;
+  font-size: 25rpx;
 }
 swiper{
   margin-top: 10rpx;
@@ -141,6 +110,52 @@ swiper-item{
 .l-pic{
   width: 34%;
   text-align: center
+}
+.icon-jituanxinwen{
+  color: #ff8029;
+}
+.icon-shichang{
+  color: #ea3136;
+}
+.icon-youhui{
+  color: #36b0ff
+}
+.icon-main-{
+  color: #00b8a0
+}
+.icon-yeji{
+  color: #feb308;
+  /* font-size:55rpx; */
+}
+.icon-zuzhi{
+  color: #07c2a5
+}
+.icon-zaixiaoqingkuang{
+  color: #fa5e73
+}
+.icon-iconfontshuxie{
+  color: #2fa3ff
+}
+.icon-jiuye1{
+  color: #e86b7b
+}
+.icon-performance{
+  color: #2fcbbd
+}
+.icon-huiyi{
+  color: #43a6fb
+}
+.icon-639{
+  color: #36b0ff
+}
+.icon-market{
+  color: #feb403
+}
+.icon-feiyong{
+  color: #ff5c7d
+}
+.icon-tousu{
+  color: #0ccaae
 }
 .icon-tongzhi,.icon-xinwen,.icon-huodong,.icon-guizhangzhidu{
   font-size: 60rpx;

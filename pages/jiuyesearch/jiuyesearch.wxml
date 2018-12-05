@@ -41,6 +41,6 @@
         </view>
       </view>
    </view>
-  <view class='tishi' wx:if="{{!searchdata.length}}">—— 锄禾日当午，上学真辛苦 ——</view>
+  <view class='tishi' wx:if="{{!searchdata.length}}">—— 该学生不存在 ——</view>
    <view class='dixian' wx:if="{{searchdata.length}}">———— 我是有底线的 ————</view>
 </view>

@@ -1,3 +1,14 @@
+view,text{
+  box-sizing: border-box;
+}
 .weui-media-box__desc{
   margin-top: 20rpx; 
+}
+.weui-title{
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+  padding: 10rpx 20rpx;
+  line-height: 80rpx;
+  color: #000;
 }

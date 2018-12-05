@@ -1,1 +1,7 @@
-{}
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "集团新闻详情",
+  "backgroundColor": "#eeeeee",
+  "navigationBarTextStyle": "black"
+}

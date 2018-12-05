@@ -1,6 +1,6 @@
 <view class="logs">
   <image src='./pic.jpg' class='jxpic'></image> 
-  <view class="name"><text>积云信息平台市场专用 - 大师兄，师傅又被妖精抓走了😂</text></view>
+  <view class="name"><text>积云信息平台</text><text class='market'>市场专用</text></view>
   <view class='body'>
     <view class="content">
       <image src='./1_03.png'></image>
@@ -17,9 +17,7 @@
           <icon class='iconfont icon-mima'></icon>
           <input type='password' placeholder='请输入密码' bindinput='pass'></input>
          </view>
-         <!-- <text class='tishi'>请输入姓名</text> -->
-         <button bindtap='login'>提 交</button>
-          <!-- <navigator url="../index/index">跳转到新页面</navigator> -->
+          <button bindtap='login'>提 交</button>
       </view>
     </view>
   </view>

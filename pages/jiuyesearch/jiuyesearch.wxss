@@ -49,7 +49,7 @@ view,icon,text,input{
   height: 100rpx;
   font-size: 27rpx;
   text-align: left;
-  text-indent: 20rpx;
+  margin-left: 20rpx; 
 }
 .search-body{
   width: 100%;
