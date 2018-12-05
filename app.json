@@ -6,10 +6,8 @@
     "pages/studenglist/studenglist",
     "pages/jiuyesearch/jiuyesearch",
     "pages/detail/detail",
-    "pages/tousu/tousu",
     "pages/jiuyegood/jiuyegood",
-    "pages/list/list",
-    "pages/news/new"
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
