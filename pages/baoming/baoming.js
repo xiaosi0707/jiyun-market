@@ -14,8 +14,8 @@ Page({
     telYes: 0,  // 手机号正确提示
     cardMsg: 0, // 身份证错误提示
     cardYes: 0,  // 身份证正确提示
-    sexs: [{ value: '男', id: 1, checked: 0 }, { value: '女', id: 2, checked: 0 }],
-    sex:'', //性别
+    sexs: [{ value: '男', id: 1, checked: 1 }, { value: '女', id: 2, checked: 0 }],
+    sex: 1, //性别
     teacher:'', //招生老师
     xueli:'',  //学历
     xuelinum:'',
@@ -83,6 +83,7 @@ Page({
   },
   //报名提交
   zhuce: function () {
+    console.log(this.data.sex)
     let user = this.data.name
     let re = /^[\u4e00-\u9fa5]+$/ // 中文名字验证
     var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/; // 手机号验证
@@ -142,7 +143,7 @@ Page({
                setTimeout(() => {
                  wx.navigateBack({
                    delta: 1
-                 }, 1000)
+                 }, 2000)
                })
               }
             })
