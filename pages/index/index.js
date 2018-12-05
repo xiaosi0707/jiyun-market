@@ -111,7 +111,7 @@ Page({
       })
     }else if(id == "报名学生"){
       wx.navigateTo({
-        url: '../baoming/baoming',
+        url: '/pages/studenglist/studenglist',
       })
     }
    
