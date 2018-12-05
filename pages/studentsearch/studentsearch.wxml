@@ -1,0 +1,103 @@
+<view class='studentsearch'>
+<!-- 头部 -->
+  <view class='studentsearch-head'>
+    <view class='head-left'>
+      <icon class='iconfont icon-sousuo'></icon>
+      <input type='text' placeholder='请输入学生姓名' class='text'></input>
+    </view>
+      <text class='head-right'>搜索</text>
+  </view>
+  <view class='studentsearch-cont'>
+    <!-- 基本信息 -->
+    <view class='cont-jiben'>
+      <text class='tiao jibenback'></text>
+      <view class='mess jibenback1'>
+        <text class='mess1'>基</text>
+        <text class='mess1'>本 </text>
+        <text class='mess1'>信</text>
+        <text class='mess1'>息</text>
+      </view>
+      <view class='mess-cont jibenback2'>
+        <view class='mess-item'>
+          <text class='item-text'>姓名：小四</text>
+          <text class='item-text'>性别：男</text>
+        </view>
+        <view  class='mess-item'>
+          <text class='item-text'>学制：16个月</text>
+          <text class='item-text'>专业：新媒体</text>
+        </view>
+         <view class='mess-item'>
+          <text class='item-text'>手机号：15213456789</text>
+       </view>
+        <view class='mess-item'>
+           <text class='item-text address'>家庭地址：河南省安阳市安阳县</text>
+        </view>
+        <view class='mess-item'>
+          <text class='item-text'>入学日期：2018-10-10</text>
+        </view>
+      </view>
+    </view>
+  <!-- 班级信息 -->
+  <view class='cont-jiben banji'>
+      <text class='tiao jibenback'></text>
+      <view class='mess jibenback1'>
+        <text class='mess1'>班</text>
+        <text class='mess1'>级</text>
+        <text class='mess1'>信</text>
+        <text class='mess1'>息</text>
+      </view>
+      <view class='mess-cont jibenback2'>
+        <view class='mess-item'>
+          <text class='item-text'>所属教学月：第10个月</text>
+        </view>
+        <view  class='mess-item'>
+          <text class='item-text'>上课类型：正常升班</text>
+        </view>
+        <view class='mess-item'>
+           <text class='item-text'>累计重修：0次</text>
+        </view>
+         <view class='mess-item'>
+          <text class='item-text'>班主任：马冬梅</text>
+          <text class='item-text'>班号：404</text>
+       </view>
+      </view>
+    </view>
+    <!-- 缴费信息 -->
+    <view class='cont-jiben jiaofei'>
+      <text class='tiao jibenback'></text>
+      <view class='mess jibenback1'>
+        <text class='mess1'>缴</text>
+        <text class='mess1'>费 </text>
+        <text class='mess1'>信</text>
+        <text class='mess1'>息</text>
+      </view>
+      <view class='mess-cont jibenback2'>
+        <view class='mess-item'>
+          <text class='item-text'>应缴学费：2322162</text>
+        </view>
+        <view class='mess-item'>
+          <text class='item-text'>应缴学费：201222</text>
+        </view>
+        <view  class='mess-item'>
+          <text class='item-text'>欠缴学费：22222</text>
+        </view>
+        <view class='mess-item'>
+          <text class='item-text'>应缴住宿费：22326</text>
+        </view>
+         <view class='mess-item'>
+          <text class='item-text'>已缴住宿费：22222</text>
+       </view>
+        <view class='mess-item'>
+           <text class='item-text address'>欠缴住宿费：222222</text>
+        </view>
+        <view class='mess-item'>
+          <text class='item-text'>入学日期：2018-10-10</text>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+
+
+</view>

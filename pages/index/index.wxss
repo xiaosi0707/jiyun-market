@@ -12,7 +12,7 @@ view,text,icon,image,navigator{
 }
 .hi{
   padding-left: 10rpx;
-  font-size: 20rpx; 
+  font-size: 30rpx; 
   color: #40a3f6;
 }
 .icon-huanyingye{
@@ -21,9 +21,11 @@ view,text,icon,image,navigator{
 }
 swiper{
   margin-top: 10rpx;
+  height: 400rpx;
 }
 swiper-item{
   width: 100%;
+  /* height: 100%; */
   box-sizing: border-box;
 }
 .slide-image{
@@ -45,17 +47,11 @@ swiper-item{
   text-align: center;
 }
 .nav-pic{
-  font-size: 45rpx;
-  /* color: #92cf68; */
-  /* color: #fa6567; */
-  color: #f5ad09;
-  /* color: #c066a6; */
-  /* color: #f7774a; */
+  font-size: 55rpx;
 }
 .title{
-  font-size: 20rpx;
+  font-size: 30rpx;
   display: block;
-  /* color:#2a91fa; */
   color: #999;
   padding-top:10rpx; 
 }
@@ -180,11 +176,4 @@ swiper-item{
 .jituan2-l{
   margin-left: 20rpx;
   margin-right: 0rpx;
-}
-.dixian{
-  width: 100%;
-  line-height: 120rpx;
-  font-size: 30rpx;
-  text-align: center;
-  color: #b3b3b3;
 }

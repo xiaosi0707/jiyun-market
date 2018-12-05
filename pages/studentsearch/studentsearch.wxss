@@ -1,1 +1,110 @@
-/* pages/studentsearch/studentsearch.wxss */
+view,text,input{
+  box-sizing: border-box;
+}
+.studentsearch-head{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  border-bottom: 2px solid #f9f9f9;
+}
+.head-left{
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  line-height: 80rpx;
+  border-right: 2rpx solid #f1f1f1;
+}
+.icon-sousuo{
+  font-size: 27rpx;
+  color: #fabf9f;
+}
+.text{
+  font-size: 27rpx;
+  margin-left: 20rpx;
+  height: 80rpx;
+  width: 60%;
+}
+.head-right{
+  font-size: 27rpx;
+  color: #fabf9f;
+  padding-left:  30rpx;
+}
+.studentsearch-cont{
+  width: 100%;
+}
+.cont-jiben{
+  width: 100%;
+  height: 390rpx;
+ padding: 20rpx 60rpx 20rpx 40rpx;
+  display: flex;
+  align-items: center;
+}
+.tiao{
+  width: 8rpx;
+  height: 100%;
+  background: #ff746a;
+}
+.mess{
+  background: #ff746a;
+  color: #000;
+  padding: 20rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 30rpx;
+}
+.mess1{
+  display: block;
+  font-size: 30rpx;
+}
+.mess-cont{
+  flex: 1;
+  background: #ff746a;
+  padding: 20rpx;
+  height: 100%;
+}
+.mess-item{
+  width: 100%;
+  display: flex;
+ }
+.item-text{
+  width: 100%;
+  flex: 1;
+  font-size: 27rpx;
+  line-height: 60rpx;
+  color: #999;
+}
+/* .address{
+  flex: 1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+} */
+.cont-banji{
+  width: 100%;
+  height: 400rpx;
+  padding: 30rpx 40rpx 40rpx 80rpx;
+  display: flex;
+  align-items: center;
+}
+.jiaofei{
+  height: 500rpx;
+}
+.banji{
+  height: 320rpx;
+}
+.jibenback{
+  background: #fff8ec;
+}
+.jibenback1{
+  background: #fff8ec;
+}
+.jibenback2{
+ background: #fff;
+  border-radius: 30rpx;
+  border-bottom: 2px solid #fff3d4;
+  border-right: 2px solid #fff3d4;
+}

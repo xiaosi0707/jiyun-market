@@ -1,13 +1,22 @@
+<view>
+<view class='studentsearch-head'>
+<view class='head-left'>
+<icon class='iconfont icon-sousuo'></icon>
+<input type='text' placeholder='请输入姓名' class='text'></input>
+</view>
+<text class='head-right'>搜索</text>
+</view>
+</view>
 <view class = 'checked'>
-  <view bindtap='fun'>{{text}}</view>
+<view bindtap='fun'>你好</view>
 </view>
 <view class = 'msg'>
-  <view>
-    <view>姓名</view>
-    <view>电话号</view>
-    <view>地区</view>
-  </view>
+<view>
+<view>姓名</view>
+<view>电话号</view>
+<view>地区</view>
+</view>
 </view>
 <!-- <loading hidden="{{hidden}}">
-    登入中...
+登入中...
 </loading> -->

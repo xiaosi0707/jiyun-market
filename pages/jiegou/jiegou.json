@@ -1,1 +1,7 @@
-{}
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "backgroundColor": "#eeeeee",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "积云市场组织结构"
+}
