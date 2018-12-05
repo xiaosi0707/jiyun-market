@@ -1,4 +1,5 @@
 /* *index.wxss* */
+@import "/font_941695_hc2wszu8zmv/iconfont";
 view,text,icon,image,navigator{
   box-sizing: border-box;
 }
