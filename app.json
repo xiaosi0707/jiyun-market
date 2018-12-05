@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/jiuyegood/jiuyegood",
-    "pages/studenglist/studenglist",
-    "pages/jiuyesearch/jiuyesearch",
-    "pages/studentsearch/studentsearch",
-    "pages/baoming/baoming",
-    "pages/index/index",
-    "pages/jiegou/jiegou",
     "pages/logs/logs",
     "pages/detail/detail",
+    "pages/jiegou/jiegou",
+    "pages/baoming/baoming",
+    "pages/studentsearch/studentsearch",
+    "pages/jiuyesearch/jiuyesearch",
+    "pages/studenglist/studenglist",
+    "pages/jiuyegood/jiuyegood",
+    "pages/index/index",
     "pages/list/list"
   ],
   "window": {
