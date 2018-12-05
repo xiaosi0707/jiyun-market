@@ -21,7 +21,7 @@
 <!--集团通知 集团新闻 -->
 <view class='jituan'>
   <view class='jituan-l' style='background:#f7774a'>
-  <navigator class='navtiao2'url='../list/list?title=集团通知'>
+  <navigator class='navtiao2'url='../inform/list?title=集团通知'>
     <view class='l-cont'>
        <text class='l-cont-text' wx:for="{{tongzhiData}}" wx:key="index">{{item.bt}}</text>
        <icon class='iconfont icon-iconfontgengduo'></icon>
@@ -33,7 +33,7 @@
     </navigator>
   </view>
   <view class='jituan-r' style='background:#c066a6'>
-   <navigator url='../list/list?title=集团新闻' class='navtiao2'>
+   <navigator url='../newsList/list?title=集团新闻' class='navtiao2'>
       <view class='r-cont'>
         <text class='r-cont-text'  wx:for="{{newsData}}" wx:key="index">{{item.bt}}</text>
         <icon class='iconfont icon-iconfontgengduo'></icon>
@@ -48,7 +48,7 @@
 <!--优惠活动 改革制度 -->
 <view class='jituan2'>
   <view class='jituan-r' style='background:#fa6567'>
-  <navigator class='navtiao2' url='../list/list?title=优惠活动'>
+  <navigator class='navtiao2' url='../activity/list?title=优惠活动'>
     <view class='r-cont'>
        <text class='r-cont-text' wx:for="{{youhuiData}}" wx:key="index">{{item.bt}}</text>
        <icon class='iconfont icon-iconfontgengduo'></icon>
@@ -60,7 +60,7 @@
    </navigator>
    </view>
   <view class='jituan-l jituan2-l' style='background:#f5ad09'>
-    <navigator class='navtiao2' url='../list/list?title=政策制度'>
+    <navigator class='navtiao2' url='../policy/list?title=政策制度'>
       <view class='l-cont'>
         <text class='l-cont-text' wx:for="{{zhengceData}}" wx:key="index">{{item.bt}}</text>
         <icon class='iconfont icon-iconfontgengduo'></icon>

@@ -97,9 +97,10 @@ Page({
   tap:function(event){
     console.log(event)
     let { id } = event.currentTarget
-    if (id == "集团新闻" || id == "优惠活动" || id == "政策制度" || id == "投诉建议"){
+    if (id == "投诉建议"){
+      console.log("Aa");
       wx.navigateTo({
-        url: '../list/list?title='+id
+        url: '../complain/list?title='+id
       })
     }else if(id == '就业利好'){
       wx.navigateTo({

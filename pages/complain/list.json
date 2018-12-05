@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "投诉建议列表",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "component-list": "/components/list/list"
+  }
+}
