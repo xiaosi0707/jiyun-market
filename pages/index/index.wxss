@@ -21,7 +21,6 @@ view,text,icon,image,navigator{
 }
 swiper{
   margin-top: 10rpx;
-
 }
 swiper-item{
   width: 100%;

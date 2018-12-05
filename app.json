@@ -2,9 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
+    "pages/jiuyesearch/jiuyesearch",
+    "pages/studentsearch/studentsearch",
     "pages/baoming/baoming",
     "pages/studenglist/studenglist",
-    "pages/jiuyesearch/jiuyesearch",
     "pages/detail/detail",
     "pages/jiuyegood/jiuyegood",
     "pages/list/list"
