@@ -40,7 +40,7 @@ view,text,input{
   }
 .content{
   width: 100%;
-  height: 800rpx;
+  height: 850rpx;
   position: relative;
 }
 image{
@@ -95,3 +95,9 @@ button{
   color: #fff;
   height: 100rpx;
 }
+.tongyi{
+  text-align: center;
+  font-size: 25rpx;
+  color: rosybrown;
+  padding-top: 20rpx; 
+} 

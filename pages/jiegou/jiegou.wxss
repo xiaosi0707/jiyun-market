@@ -1,0 +1,27 @@
+.checked{
+  width:30%;
+  text-align:center;
+  background-color:rgba(245,245,245,.3);
+  height:1200rpx;
+}
+.checked view{
+  width:100%;
+  text-align: center;
+  line-height:70rpx;
+  color:#666;
+}
+page{
+  display:flex;
+}
+.msg>view{
+  display:flex;
+}
+.msg view view{
+  width:100%;
+  box-sizing:border-box;
+  text-align: center;
+  line-height:70rpx;
+}
+.msg{
+  width:70%;
+}

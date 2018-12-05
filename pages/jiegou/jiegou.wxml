@@ -1,0 +1,13 @@
+<view class = 'checked'>
+  <view bindtap='fun'>{{text}}</view>
+</view>
+<view class = 'msg'>
+  <view>
+    <view>姓名</view>
+    <view>电话号</view>
+    <view>地区</view>
+  </view>
+</view>
+<!-- <loading hidden="{{hidden}}">
+    登入中...
+</loading> -->

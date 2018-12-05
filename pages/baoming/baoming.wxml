@@ -40,5 +40,4 @@
        </picker>
     </view> -->
   <view class='zhuce' bindtap='zhuce'>报 名</view>
-  <view class='tongyi'>已阅读并同意《积云用户协议》</view>
 </view>

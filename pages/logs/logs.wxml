@@ -17,7 +17,8 @@
           <icon class='iconfont icon-mima'></icon>
           <input type='password' placeholder='请输入密码' bindinput='pass'></input>
          </view>
-          <button bindtap='login'>提 交</button>
+          <button bindtap='login'>登 录</button>
+          <view class='tongyi'>已阅读并同意《积云用户协议》</view>
       </view>
     </view>
   </view>
