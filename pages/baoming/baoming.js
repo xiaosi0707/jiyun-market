@@ -8,32 +8,128 @@ Page({
    * 页面的初始数据
    */
   data: {
-    sex:'', //性别
-    sexmum:'',
-    teach:'', //招生老师
+    userMsg: 0, // 姓名验证提示
+    userYes: 0, // 姓名验证正确
+    telMsg: 0, // 手机号错误提示
+    telYes: 0,  // 手机号正确提示
+    cardMsg: 0, // 身份证错误提示
+    cardYes: 0,  // 身份证正确提示
+    sexs: [{ value: '男', id: 1, checked: 1 }, { value: '女', id: 2, checked: 0 }],
+    sex: 1, //性别
+    teacher:'', //招生老师
     xueli:'',  //学历
     xuelinum:'',
     date: '',  //日期
     tel:'',   //手机号
-    mess:'',  
     name:'',  //姓名
     card:'',  //身份证号
 
   },
-  //注册
+  userFocus(e) { // 获取焦点时姓名的提示
+    let { value } = e.detail
+    let re = /^[\u4e00-\u9fa5]+$/
+    if (!value) {
+      this.setData({
+        userMsg: 1,
+        userYes: 0,
+      })
+    } else if (!re.test(value) || value.length < 2) {
+      this.setData({
+        userMsg: 1,
+        userYes: 0,
+      })
+    } else if (re.test(value) && value.length > 1) {
+      this.setData({
+        userMsg: 0,
+        userYes: 1
+      })
+    }
+
+  },
+  onname(e) { // 获取姓名
+    let re = /^[\u4e00-\u9fa5]+$/
+    let user = e.detail.value
+    this.setData({
+      msg: ''
+    })
+    if (!re.test(user)) {
+      this.setData({
+        userMsg: 1,
+        userYes: 0
+      })
+    } else if (user.length < 2) {
+      this.setData({
+        userMsg: 1,
+        userYes: 0
+      })
+    } else if (re.test(user) && user.length > 1) {
+      this.setData({
+        userMsg: 0,
+        userYes: 1,
+        name: user,
+      })
+    }
+    this.setData({
+      name: user,
+    })
+  },
+  radioChange (e) { // 获取性别
+    let { value } = e.detail
+    console.log(value)
+    this.setData({
+      sex: value
+    })
+
+  },
+  //报名提交
   zhuce: function () {
-    if (this.data.name && this.data.sex && this.data.tel && this.data.card && this.data.xueli && this.data.teach && this.data.date){
+    console.log(this.data.sex)
+    let user = this.data.name
+    let re = /^[\u4e00-\u9fa5]+$/ // 中文名字验证
+    var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/; // 手机号验证
+    var userCard = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/; // 身份证验证
+    if (!user) {
+    wx.showModal({
+      title: '提示',
+      content: '请完善信息',
+    })
+    } else if (!re.test(user) || user.length < 2 ) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入真实姓名，只支持汉字',
+      })
+    } else if (!this.data.sex || !this.data.xueli || !this.data.card) {
+      wx.showModal({
+        title: '提示',
+        content: '请继续完善信息',
+      })
+    } else if (!myreg.test(this.data.tel)) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入正确手机号',
+      })
+    } else if (!userCard.test(this.data.card)) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入正确身份证号',
+      })
+    } else if (!this.data.teacher) {
+      wx.showModal({
+        title: '提示',
+        content: '请输入你的招生老师',
+      })
+    } else if (this.data.name && this.data.sex && myreg.test(this.data.tel) && userCard.test(this.data.card) && this.data.xueli && this.data.teacher){
       // console.log("studentadd")
       http.request({
         url:'studentadd',
         data:{
-          "username":this.data.name,
+          "username": user,
           "card":this.data.card,
           "education":this.data.xuelinum,
           "tel":this.data.tel,
-          "sex":this.data.sexmum,
+          "sex":this.data.sex,
           "date":this.data.date,
-          "zsls":this.data.teach
+          "zsls":this.data.teacher
         },
         success:(res=>{
           // console.log(res)
@@ -44,115 +140,127 @@ Page({
               duration:100,
               success:function(res){
                 console.log(res)
-                wx.navigateTo({
-                  url: '../studenglist/studenglist',
-                })
+               setTimeout(() => {
+                 wx.navigateBack({
+                   delta: 1
+                 }, 2000)
+               })
               }
             })
          }else{
            wx.showModal({
              title: '失败',
-             content: '请重新输入信息，并注册报名',
+             content: '请重新输入信息，并提交报名',
            })
          }
         })
       })
-    }else{
-      wx.showModal({
-        title: '提示',
-        content: '请输入信息',
+    }
+  },
+
+  oncardfocus (e) { // 身份证获取焦点验证
+    let { value } = e.detail
+    var userCard = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/; // 身份证验证
+    if (!value) {
+      this.setData({
+        cardMsg: 1, 
+        cardYes:0
+      })
+    } else if (!userCard.test(value)) {
+      this.setData({
+        cardMsg: 1,
+        cardYes: 0
+      })
+    } else if (userCard.test(value)) {
+      this.setData({
+        cardMsg: 0,
+        cardYes: 1
       })
     }
   },
   //身份证号
   card:function(e){
-    if (e.detail.value) {
+    var userCard = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/; // 身份证验证
+    let { value } = e.detail
+    if (!value) {
       this.setData({
-        card: e.detail.value
+        cardMsg: 1,
+        cardYes: 0
       })
-    } 
-    // else {
-    //   this.setData({
-    //     mess: "不能为空"
-    //   })
-    // }
-  },
-  //姓名
-  name:function(e){
-    if (e.detail.value) {
+    } else if (!userCard.test(value)) {
       this.setData({
-        name: e.detail.value
+        cardMsg: 1,
+        cardYes: 0,
+        card: value
       })
-    } 
-    // else {
-    //   this.setData({
-    //     mess: "不能为空"
-    //   })
-    // }
-  },
-  //招生老师
-  teach:function(e){
-    if(e.detail.value){
+    } else if (userCard.test(value)) {
       this.setData({
-        teach:e.detail.value
+        cardMsg: 0,
+        cardYes: 1,
+        card: value
       })
     }
-    // else{
-    //   this.setData({
-    //     mess:"不能为空"
-    //   })
-    // }
+    
+  },
+  
+  //招生老师
+  teach:function(e){
+    let { value } = e.detail
+    console.log(value)
+      this.setData({
+        teacher: value
+      })
+  },
+
+  onTelfocus () { // 手机号获取焦点提示
+    let tle = this.data.tel
+    var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/;
+    if (!tle) {
+      this.setData({
+        telMsg: 1,
+        telYes: 0
+      })
+    } else if (!myreg.test(tle)) {
+      this.setData({
+        telMsg: 1,
+        telYes: 0
+      })
+    } else if (myreg.test(tle)) {
+      this.setData({
+        telMsg: 0,
+        telYes: 1
+      })
+    }
   },
   //手机号
   tel:function(e){
     var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/;
     if(e.detail.value==''){
       this.setData({
-        mess:'不能为空'
+        telMsg: 1,
+        telYes: 0
       })
-    }
-    else if (!myreg.test(e.detail.value)) {
+    } else if (!myreg.test(e.detail.value)) {
       
       console.log("手机号码有误，请重填");
       this.setData({
-        mess:'手机号码有误，请重填'
+        tel: e.detail.value,
+        telMsg: 1,
+        telYes: 0
       })
-     } else{
+    } else if (myreg.test(e.detail.value)){
       this.setData({
         tel: e.detail.value,
-        mess: "手机号正确"
+        telMsg: 0,
+        telYes: 1
       })
       console.log(this.data.tel)
     }
    },
-  //性别选择
-  sex:function(e){
-    let that = this
-    console.log(e)
-    wx.showActionSheet({
-      itemList: ['男','女'],
-      success:function(res){
-        console.log(res)
-        if(res.tapIndex==0){
-          e.target.id="男"
-          that.setData({
-            sex:e.target.id,
-            sexmum:1
-          })
-        }else{
-          e.target.id="女"
-          that.setData({
-            sex:e.target.id,
-            sexmum: 2
-          })
-        }
-      }
-    })
-  },
+  
   //学历
   xueli:function(e){
     let that = this
-    console.log(e)
     wx.showActionSheet({
       itemList: ['小学',"初中","高中","大学","其它"],
       success:function(res){
@@ -196,20 +304,23 @@ Page({
       }
     })
   },
-  //日期
-  bindDateChange: function (e) {
-    this.setData({
-      date: e.detail.value
-    })
-    console.log(this.data.date)
-  },
+  
  
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let _this = this
+    wx.getStorage({ // 获取的登录人的姓名
+      key: 'user',
+      success: function(res) {
+        console.log(res)
+        _this.setData({
+          teacher: res.data
+        })
+      },
+    })
   },
 
   /**

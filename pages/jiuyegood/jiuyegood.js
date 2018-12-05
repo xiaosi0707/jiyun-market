@@ -16,60 +16,32 @@ Page({
       wx.request({
         url: 'http://3w.houbowang.com/json/studentList.php',
         success(res) {
-          console.log(res)
+          let data = res.data;
+          data = that.order(data);
           that.setData({
-            goodsdata:res.data
+            goodsdata:data
           })
         }
       })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  order(data) {  //强制排序顺序
+  let dataList = [];
+    let title = ["全栈","大数据","物联网","PHP","新媒体视觉"];  //过滤信息
+    title.forEach(item=>{
+      for(let i = 0;data[i]!=undefined;i++){
+        if (data[i].bname === item){
+          //屏蔽学生姓名信息
+          data[i].sname = data[i].sname.replace(/\s/g,""); 
+          console.log(data[i].sname.length);
+          if(data[i].sname.length <= 2){
+            data[i].sname = data[i].sname[0] + "**";
+          }else{
+            data[i].sname = data[i].sname[0] + "**" + data[i].sname[data[i].sname.length - 1];
+          }
+          dataList.push(data[i]);
+        }
+      }
+    });
+    return dataList;
   }
 })

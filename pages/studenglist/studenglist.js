@@ -9,7 +9,11 @@ Page({
   data: {
       studentlist:[]
   },
-
+  onBaoming () { // 跳转到 报名页
+    wx.navigateTo({
+      url: '/pages/baoming/baoming',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

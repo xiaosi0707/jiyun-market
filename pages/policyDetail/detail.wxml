@@ -1,0 +1,19 @@
+ <view class="weui-panel">
+  <view class="weui-panel__hd weui-title">{{listdetail.bt}}</view>
+  <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">{{listdetail.fbt}}</view>
+          <view class="weui-media-box__info">
+              <view class="weui-media-box__info__meta">文字来源：{{listdetail.username}}</view>
+              <view class="weui-media-box__info__meta">时间：{{listdetail.date}}</view>
+              <!-- <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">其它信息}}</view> -->
+          </view>
+          <!-- <import src="../../wxParse/wxParse.wxml"/> -->
+          <!-- <template is="wxParse" data="{{wxParseData : text.nodes}}"/> -->
+          <import src="../../wxParse/wxParse.wxml"/> 
+          <template class = 'content' is="wxParse" data="{{wxParseData:datas.nodes}}"></template>
+          
+      </view>
+  </view>
+  </view>
+   
