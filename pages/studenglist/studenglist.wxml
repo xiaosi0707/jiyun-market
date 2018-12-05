@@ -37,3 +37,4 @@
       <view class='yubao'>我要报名</view>
 </view>
 <component-mask loading = "{{loading}}"></component-mask>
+<view class='yubao'  bindtap='onBaoming' >我要报名</view>

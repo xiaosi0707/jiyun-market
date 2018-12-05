@@ -83,19 +83,17 @@ Page({
     tongzhiData:[],
     youhuiData:[],
     zhengceData:[],
-    user:'',
+    user:'积云', // 登录的姓名
     imgUrls: [
       '../img/banmer-1.jpg',
       '../img/banmer-2.jpg',
-      '../img/banmer-3.jpg',
-      '../img/banmer-4.jpg',
-      '../img/banmer-5.jpg',
-      '../img/banmer-6.jpg'
+      '../img/banmer-3.jpg'
     ],
     indicatorDots: true,
-    autoplay: true,
+    autoplay: true, // 自动播放
     interval: 3000,
     duration: 1000,
+    circular: true // 循环播放
   },
   tap:function(event){
     console.log(event)

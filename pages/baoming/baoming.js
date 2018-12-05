@@ -82,7 +82,7 @@ Page({
 
   },
   //报名提交
-  zhuce: function () {
+  zhuce () {
     console.log(this.data.sex)
     let user = this.data.name
     let re = /^[\u4e00-\u9fa5]+$/ // 中文名字验证
