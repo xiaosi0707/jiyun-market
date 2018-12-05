@@ -5,14 +5,25 @@
     "pages/baoming/baoming",
     "pages/studenglist/studenglist",
     "pages/jiuyesearch/jiuyesearch",
-    "pages/detail/detail",
     "pages/jiuyegood/jiuyegood",
-    "pages/list/list"
+    "pages/newsDetail/detail",
+    "pages/informDetail/detail",
+    "pages/activityDetail/detail",
+    "pages/policyDetail/detail",
+    "pages/complainDetail/detail",
+    "pages/newsList/list",
+    "pages/inform/list",
+    "pages/activity/list",
+    "pages/policy/list",
+    "pages/complain/list"
   ],
   "window": {
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle":"dark",
+    "backgroundColor":"#F8F8F8",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "欢迎来到积云学院",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
   }
 }

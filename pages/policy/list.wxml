@@ -1,0 +1,1 @@
+<component-list data = "{{data}}" title = "{{title}}" url = '/pages/policyDetail/'></component-list>
