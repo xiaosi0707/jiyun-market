@@ -17,8 +17,7 @@ Page({
     this.setData({
       title: options.title
     })
-    Api.news(0).then(res => { //首次加载
-    console.log(res);
+    Api.complain(0).then(res => { //首次加载
       Class.loadData(this, res.data.list.data);
     })
   },
@@ -26,16 +25,16 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    Api.news(0).then(res => { //刷新
+    Api.complain(0).then(res => { //刷新
       Class.loadData(this, res.data.list.data);
     })
-  },
+  },    
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    Api.news(this.data.page++).then(res => {  //加载数据
+    Api.complain(this.data.page++).then(res => {  //加载数据
       Class.concatData(this, res.data.list.data);
     })
   },

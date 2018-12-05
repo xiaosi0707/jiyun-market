@@ -20,11 +20,12 @@ Page({
   onLoad: function (options) {
     console.log(options);
     Api.getDef(options.title, options.id).then(res => {  //获取详情
-      console.log(res);
       this.setData({
         listdetail: res.data.list,
         cont: res.data.list.text
       })
+      let datas = res.data.list.text;
+      wxParse('datas', 'html', datas, this, 0);
     })
   }
 })

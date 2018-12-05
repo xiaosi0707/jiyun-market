@@ -1,4 +1,5 @@
 // pages/list/list.js
+let { wxParse } = require('../../wxParse/wxParse.js');
 import { Request } from "../../models/request.js";
 let Api = new Request();
 import { funClass } from "../../models/class.js";

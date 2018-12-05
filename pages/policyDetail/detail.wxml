@@ -10,7 +10,8 @@
           </view>
           <!-- <import src="../../wxParse/wxParse.wxml"/> -->
           <!-- <template is="wxParse" data="{{wxParseData : text.nodes}}"/> -->
-          <view class="weui-media-box__desc">{{listdetail.text}}</view>
+          <import src="../../wxParse/wxParse.wxml"/> 
+          <template class = 'content' is="wxParse" data="{{wxParseData:datas.nodes}}"></template>
           
       </view>
   </view>

@@ -22,6 +22,8 @@ Page({
         listdetail: res.data.list.list,
         cont: res.data.list.list.text
       })
+      let datas = res.data.list.list.text;
+      wxParse('datas', 'html', datas, this, 0);
     })
   }
 })
