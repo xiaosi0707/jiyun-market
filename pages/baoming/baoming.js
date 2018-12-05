@@ -95,7 +95,7 @@ Page({
     } else if (!re.test(user) || user.length < 2 ) {
       wx.showModal({
         title: '提示',
-        content: '请输入真实姓名',
+        content: '请输入真实姓名，只支持汉字',
       })
     } else if (!this.data.sex || !this.data.xueli || !this.data.card) {
       wx.showModal({
