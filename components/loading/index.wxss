@@ -1,0 +1,30 @@
+@import "../../font_941695_hc2wszu8zmv/iconfont";
+.mask{
+  background-color:rgba(0,0,0,.3);
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+}
+.mask view{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:128rpx;
+  height:128rpx;
+  text-align: center;
+  color:#FFF;
+  font-size:100rpx;
+  animation:1s myfirst infinite 0s;
+  transform-origin:center;
+  transform:translate(-50%,-50%);
+  margin-left:-64rpx;
+  margin-top:-64rpx;
+  
+}
+@keyframes myfirst
+{
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}

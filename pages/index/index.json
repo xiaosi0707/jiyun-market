@@ -3,6 +3,8 @@
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "积云信息平台市场APP首页",
   "backgroundColor": "#eeeeee",
-  "navigationBarTextStyle": "black"
- 
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "component-mask": "/components/loading/index"
+  }
 }
