@@ -14,6 +14,7 @@ class funClass{
     ev.setData({
       data: data,
       page: 1,
+      loading:false
     })
   }
 }

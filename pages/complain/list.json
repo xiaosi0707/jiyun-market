@@ -4,6 +4,7 @@
   "navigationBarTitleText": "投诉建议列表",
   "navigationBarTextStyle": "black",
   "usingComponents": {
-    "component-list": "/components/list/list"
+    "component-list": "/components/list/list",
+    "component-mask": "/components/loading/index"
   }
 }

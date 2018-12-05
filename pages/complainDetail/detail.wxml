@@ -16,4 +16,5 @@
       </view>
   </view>
   </view>
+  <component-mask loading = "{{loading}}"></component-mask>
    

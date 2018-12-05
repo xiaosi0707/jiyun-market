@@ -3,5 +3,8 @@
   "navigationBarBackgroundColor": "#fff",
   "backgroundColor": "#eeeeee",
   "navigationBarTitleText": "投诉建议详情",
-  "navigationBarTextStyle": "black"
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "component-mask": "/components/loading/index"
+  }
 }

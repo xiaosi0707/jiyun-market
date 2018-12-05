@@ -12,7 +12,8 @@ Page({
   data: {
     data:[],
     title:'',
-    page: 1
+    page: 1,
+    loading:true
   },
   /**
    * 生命周期函数--监听页面加载

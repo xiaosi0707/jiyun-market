@@ -11,18 +11,19 @@ Page({
    */
   data: {
     listdetail:{},
-    cont:''
+    cont:'',
+    loading:true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
     Api.getDef(options.title, options.id).then(res => {  //获取详情
       this.setData({
         listdetail: res.data.list,
-        cont: res.data.list.text
+        cont: res.data.list.text,
+        loading: false
       })
       let datas = res.data.list.text;
       wxParse('datas', 'html', datas, this, 0);

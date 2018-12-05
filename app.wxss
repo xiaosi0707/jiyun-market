@@ -1,7 +1,6 @@
 /**app.wxss**/
 @import "./font_941695_hc2wszu8zmv/iconfont";
 @import "./weui.wxss";
-/* @import "./wxParse/wxParse.wxss"; */
 .container {
   height: 100%;
   display: flex;

@@ -3,6 +3,7 @@ import { Request } from "../../models/request.js";
 let Api = new Request();
 import { funClass} from "../../models/class.js";
 let Class = new funClass();
+
 Page({
 
   /**
@@ -11,7 +12,8 @@ Page({
   data: {
     data:[],
     title:'',
-    page:1
+    page:1,
+    loading:true
   },
 
   /**

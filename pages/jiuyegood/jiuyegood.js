@@ -32,7 +32,6 @@ Page({
         if (data[i].bname === item){
           //屏蔽学生姓名信息
           data[i].sname = data[i].sname.replace(/\s/g,""); 
-          console.log(data[i].sname.length);
           if(data[i].sname.length <= 2){
             data[i].sname = data[i].sname[0] + "**";
           }else{

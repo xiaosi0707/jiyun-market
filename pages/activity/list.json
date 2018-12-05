@@ -4,6 +4,7 @@
   "navigationBarTitleText": "集团活动列表",
   "navigationBarTextStyle": "black",
   "usingComponents": {
-    "component-list": "/components/list/list"
+    "component-list": "/components/list/list",
+    "component-mask": "/components/loading/index"
   }
 }

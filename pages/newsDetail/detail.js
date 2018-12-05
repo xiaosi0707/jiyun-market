@@ -11,7 +11,8 @@ Page({
    */
   data: {
     listdetail: {},
-    cont: ''
+    cont: '',
+    loading:true
   },
 
   /**
@@ -22,7 +23,8 @@ Page({
       console.log(res);
       this.setData({
         listdetail: res.data.list,
-        cont: res.data.list.text
+        cont: res.data.list.text,
+        loading:false
       })
       let datas = res.data.list.text;
       wxParse('datas', 'html', datas, this, 0);

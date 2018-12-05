@@ -1,1 +1,2 @@
 <component-list data = "{{data}}" title = "{{title}}" url = '/pages/newsDetail/'></component-list>
+<component-mask loading = "{{loading}}"></component-mask>

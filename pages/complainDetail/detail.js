@@ -11,7 +11,8 @@ Page({
    */
   data: {
     listdetail:{},
-    cont:''
+    cont:'',
+    loading:true
   },
 
   /**
@@ -21,7 +22,8 @@ Page({
     Api.getDef(options.title, options.id).then(res => {  //获取详情
       this.setData({
         listdetail: res.data.list,
-        cont: res.data.list.text
+        cont: res.data.list.text,
+        loading:false
       });
       let datas = res.data.list.text;
       wxParse('datas', 'html', datas, this, 0);

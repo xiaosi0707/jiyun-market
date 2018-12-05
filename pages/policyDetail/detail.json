@@ -3,5 +3,8 @@
   "navigationBarBackgroundColor": "#fff",
   "backgroundColor": "#eeeeee",
   "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "政策制度详情"
+  "navigationBarTitleText": "政策制度详情",
+  "usingComponents": {
+    "component-mask": "/components/loading/index"
+  }
 }

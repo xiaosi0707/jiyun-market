@@ -3,5 +3,8 @@
   "navigationBarBackgroundColor": "#fff",
   "backgroundColor": "#eeeeee",
   "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "新闻列表详情"
+  "navigationBarTitleText": "新闻列表详情",
+  "usingComponents": {
+    "component-mask": "/components/loading/index"
+  }
 }

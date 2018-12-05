@@ -11,11 +11,13 @@ Page({
   data: {
     data:[],  
     title:'',
-    page:1
+    page:1,
+    loading:false
   },
   onLoad: function (options){
     this.setData({
-      title: options.title
+      title: options.title,
+      loading:true
     })
     Api.complain(0).then(res => { //首次加载
       Class.loadData(this, res.data.list.data);

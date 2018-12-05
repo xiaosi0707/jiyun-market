@@ -13,7 +13,8 @@ Page({
   data: {
     data:[],
     title:'',
-    page:1
+    page:1,
+    loading:true
   },
 
   /**
