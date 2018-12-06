@@ -117,23 +117,23 @@ Page({
       })
     }else if(id == "集团新闻"){
       wx.navigateTo({
-        url:'/pages/newsList/list'
+        url:'/pages/newsList/list?title='+id
       })
     } else if (id == "优惠活动") {
       wx.navigateTo({
-        url: '/pages/activity/list'
+        url: '/pages/activity/list?title=' + id
       })
     } else if (id == "政策制度") {
       wx.navigateTo({
-        url: '/pages/policy/list'
+        url: '/pages/policy/list?title=' + id
       })
     } else if (id == "投拆建议") {
       wx.navigateTo({
-        url: '/pages/complain/list'
+        url: '/pages/complain/list?title=' + id
       })
     } else if (id == "集团通知") {
       wx.navigateTo({
-        url: '/pages/inform/list'
+        url: '/pages/inform/list?title=' + id
       })
     }
    
