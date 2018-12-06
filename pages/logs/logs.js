@@ -66,6 +66,10 @@ Page({
       this.setData({
         logs: '请输入正确手机号'
       })
+      wx.showModal({
+        title: '提示',
+        content: '请输入正确手机号',
+      })
     } else if (!pass) {
       this.setData({
         logs: '请输入密码'
@@ -102,6 +106,10 @@ Page({
               })
              
             } else {
+              wx.showModal({
+                title: '提示',
+                content: data.message,
+              })
               that.setData({
                 logs: data.message
               })

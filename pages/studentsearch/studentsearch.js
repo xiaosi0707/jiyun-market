@@ -20,13 +20,18 @@ Page({
   },
   onSearchList () { // 搜索
     let user = this.data.userName
+    var indata = []
     http.getSearchData(user).then(res=> {
       console.log(res.data)
-      
+      indata = res.data
     })
     http.getSearchList(user).then(res => {
       console.log(res.data)
 
+      for (var i = 0; res.data[i]!=undefined; i++) {
+       
+      }
+    
     })
   }
 })
