@@ -2,8 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/studentsearch/studentsearch",
-    "pages/logs/logs",
     "pages/jiegou/jiegou",
+    "pages/logs/logs",
     "pages/baoming/baoming",
     "pages/studenglist/studenglist",
     "pages/jiuyesearch/jiuyesearch",
