@@ -85,9 +85,12 @@ Page({
     zhengceData:[],
     user:'积云', // 登录的姓名
     imgUrls: [
-      '../img/banmer-1.jpg',
-      '../img/banmer-2.jpg',
-      '../img/banmer-3.jpg'
+      'https://www.uu5u.cn/images/banmer-1.jpg',
+      'https://www.uu5u.cn/images/banmer-2.jpg',
+      'https://www.uu5u.cn/images/banmer-3.jpg',
+      'https://www.uu5u.cn/images/banmer-4.jpg',
+      'https://www.uu5u.cn/images/banmer-5.jpg',
+      'https://www.uu5u.cn/images/banmer-6.jpg'
     ],
     indicatorDots: true,
     autoplay: true, // 自动播放

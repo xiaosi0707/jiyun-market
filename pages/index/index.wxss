@@ -71,7 +71,7 @@ swiper-item{
   justify-content: space-between;
 }
 .jituan-l{
-  width: 65%;
+  width: 64%;
   background: #92cf68;
   padding: 10rpx;
   display: flex;
@@ -164,7 +164,7 @@ swiper-item{
   padding-top: 20rpx;
 }
 .jituan-r{
-  width: 39%;
+  width: 34%;
   padding: 10rpx;
   
 }

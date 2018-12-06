@@ -20,6 +20,7 @@ Page({
     let upName = ev.name == undefined ? item.user:ev.name;
       //判断职位
       type = parseInt(type);
+      console.log(type);
       switch(type){
         case 5:
           position = "区域经理";
@@ -42,7 +43,6 @@ Page({
       //请求人员
       
       Api.getOrgan(id,type).then(res=>{
-        console.log(res);
         this.setData({
           dataList:res.data.dataList,
           type:res.data.type
