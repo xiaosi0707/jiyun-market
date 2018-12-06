@@ -4,7 +4,7 @@
 <icon class='iconfont icon-sousuo'></icon>
 <input type='text' placeholder='请输入姓名' class='text'></input>
 </view>
-<text class='head-right'>搜索</text>
+<text class='head-right' bindtap='search'>搜索</text>
 </view>
 </view>
 <view class = 'box'>
