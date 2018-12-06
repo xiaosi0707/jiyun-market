@@ -123,13 +123,9 @@ Page({
         url: '/pages/studentsearch/studentsearch',
       })
     }else if(id == "组织结构"){
-<<<<<<< HEAD
       wx.navigateTo({
         url: '/pages/jiegou/jiegou'
       })
-=======
-      
->>>>>>> 8532ad0d239f503aa8fa4ef5acceb0586a1c01dd
     }else if(id == "集团新闻"){
       wx.navigateTo({
         url:'/pages/newsList/list?title='+id
@@ -150,10 +146,6 @@ Page({
       wx.navigateTo({
         url: '/pages/inform/list?title=' + id
       })
-<<<<<<< HEAD
-=======
-
->>>>>>> 8532ad0d239f503aa8fa4ef5acceb0586a1c01dd
     }
    
   }, 

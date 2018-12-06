@@ -1,16 +1,9 @@
 {
   "pages": [
-<<<<<<< HEAD
     "pages/logs/logs",
-    "pages/index/index",
-    "pages/jiegou/jiegou",
-=======
     "pages/studentsearch/studentsearch",
     "pages/index/index",
     "pages/jiegou/jiegou",
-    "pages/logs/logs",
-
->>>>>>> 8532ad0d239f503aa8fa4ef5acceb0586a1c01dd
     "pages/baoming/baoming",
     "pages/studenglist/studenglist",
     "pages/jiuyesearch/jiuyesearch",
