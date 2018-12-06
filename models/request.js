@@ -133,5 +133,13 @@ class Request{
     let data = http.send('http://47.92.39.32:8088/StudentService/GetPaymentsInfo/' + name, 'get')
     return data
   }
+  //搜索数据
+  search_teacher(){
+    let data = http.send("http://jy.haoyunyun.cn/api/search","post",{
+      phome:"13051976351",
+      name:"邵聪聪"
+    });
+    return data;
+  }
 }
 export{Request}

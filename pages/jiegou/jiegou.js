@@ -71,5 +71,10 @@ Page({
       url: '/pages/jiegou/jiegou?name=' + dataList.username + "&type=" + type + "&id=" + dataList.id,
     })
 
+  },
+  search(){
+    Api.search_teacher().then(res=>{
+      console.log(res);
+    })
   }
 })
