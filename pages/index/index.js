@@ -21,7 +21,7 @@ Page({
       {
         title: '集团新闻',
         icon: 'icon-jituanxinwen'
-      },
+       },
       {
         title: '市场通知',
         icon: 'icon-shichang'
@@ -114,6 +114,26 @@ Page({
     }else if(id == "报名学生"){
       wx.navigateTo({
         url: '/pages/studenglist/studenglist',
+      })
+    }else if(id == "集团新闻"){
+      wx.navigateTo({
+        url:'/pages/newsList/list'
+      })
+    } else if (id == "优惠活动") {
+      wx.navigateTo({
+        url: '/pages/activity/list'
+      })
+    } else if (id == "政策制度") {
+      wx.navigateTo({
+        url: '/pages/policy/list'
+      })
+    } else if (id == "投拆建议") {
+      wx.navigateTo({
+        url: '/pages/complain/list'
+      })
+    } else if (id == "集团通知") {
+      wx.navigateTo({
+        url: '/pages/inform/list'
       })
     }
    

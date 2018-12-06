@@ -14,9 +14,9 @@
     "pages/policyDetail/detail",
     "pages/complainDetail/detail",
     "pages/newsList/list",
-    "pages/inform/list",
     "pages/activity/list",
     "pages/policy/list",
+    "pages/inform/list",
     "pages/complain/list"
   ],
   "window": {
