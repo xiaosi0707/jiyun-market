@@ -115,6 +115,12 @@ Page({
       wx.navigateTo({
         url: '/pages/studenglist/studenglist',
       })
+    }else if(id == "在校查询"){
+      wx.navigateTo({
+        url: '/pages/studentsearch/studentsearch',
+      })
+    }else if(id == "组织结构"){
+      
     }
    
   },
@@ -125,9 +131,8 @@ Page({
     var user = wx.getStorageSync("user")
     this.setData({
       title: options.title,
-      user:user
+      user:user.user
     })
-    console.log(this.data.user)
      // 集团新闻
     news.getNewsList((res) => {
       console.log(res)

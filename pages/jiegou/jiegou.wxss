@@ -59,3 +59,12 @@ font-size: 27rpx;
 color: #ff7a00;
 padding-left: 30rpx;
 }
+.box{
+  display:flex;
+}
+.ul view{
+  font-size:24rpx;
+}
+.ul:nth-child(1){
+  background-color:#F5F5F5;
+}

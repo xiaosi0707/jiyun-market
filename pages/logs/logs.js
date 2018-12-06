@@ -95,9 +95,10 @@ Page({
                   }, 500)
                 }
               })
+              res.data.user = user;
               wx.setStorage({
                 key: 'user',
-                data: user,
+                data: res.data,
               })
              
             } else {

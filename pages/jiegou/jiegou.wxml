@@ -7,16 +7,25 @@
 <text class='head-right'>搜索</text>
 </view>
 </view>
-<view class = 'checked'>
-<view bindtap='fun'>你好</view>
+<view class = 'box'>
+  <view class = 'checked'>
+    <view>
+      {{text}}
+    </view>
+    <view  bindtap='fun' wx:for = "{{dataList}}" wx:for-item = "item" wx:for-index = "index" data-index = "{{index}}">
+      <view>{{item.username}}</view>
+    </view>
+  </view>
+  <view class = 'msg'>
+    <view class = 'ul'>
+      <view>姓名</view>
+      <view>手机号</view>
+      <view>所属</view>
+    </view>
+    <view class = 'ul' wx:for = "{{dataList}}" wx:for-item = "item">
+      <view>{{item.username}}</view>
+      <view>{{item.tel}}</view>
+      <view>{{upName}}</view>
+    </view>
+  </view>
 </view>
-<view class = 'msg'>
-<view>
-<view>姓名</view>
-<view>电话号</view>
-<view>地区</view>
-</view>
-</view>
-<!-- <loading hidden="{{hidden}}">
-登入中...
-</loading> -->
