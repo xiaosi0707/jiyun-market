@@ -39,5 +39,5 @@
         </view>
       </view>
    </view>
-  <view class='tishi' wx:if="{{!searchdata.length}}">—— 该学生不存在 ——</view>
+  <view class='tishi' style='color: {{color}}'>{{ msg }}</view>
 </view>

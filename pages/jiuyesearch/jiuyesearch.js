@@ -6,36 +6,61 @@ Page({
    */
   data: {
     val:'',
-    searchdata:[]
+    searchdata:[],
+    msg: '', // 提示
+    color: '' // 提示颜色
   },
  getval:function(event){
      this.setData({
-       val: event.detail.value
+       val: event.detail.value,
+       msg: '',
+       color: ''
      })
-     console.log(this.data.val)
  },
   search:function(e){
-    console.log(e)
     var that = this
-    console.log(that.data.val)
-    if(that.data.val){
+    var user = that.data.val
+    let reg = /^[\u4e00-\u9fa5]+$/
+    user = user.replace(/(^\s+)|(\s+$)/g, "")
+    var containSpecial = /[\-\_\,\!\|\~\`\(\)\#\$\%\^\&\*\{\}\:\.\。\、\/\;\"\L\<\>\?]/g
+    if (!user) {
+      this.setData({
+        msg: '请输入学生姓名',
+        color: 'red'
+      })
+    } else if (!reg.test(user)) {
+      this.setData({
+        msg: '请输入中文查询，不能有字母、数字或非法字符',
+        color: 'red'
+      })
+    } else if (containSpecial.test(user)) {
+      this.setData({
+        msg: '检测到有非法字符',
+        color: 'red'
+      })
+    } else if (reg.test(user)) {
       wx.request({
         url: 'http://3w.houbowang.com/json/student.php?uu=' + that.data.val,
         method: 'get',
         success(res) {
           console.log(res)
-          that.setData({
-            searchdata: res.data
-          })
+          if (!res.data.length) {
+            that.setData({
+              msg: '该学生未查询到',
+              color: 'blue',
+              searchdata: []
+            })
+          } else {
+            that.setData({
+              msg: '',
+              color: '',
+              searchdata: res.data
+            })
+          }
         }
       })
-    }else{
-      wx.showModal({
-        title: '提示',
-        content: '请输入学生姓名',
-      })
+    
     }
-   
   },
   /**
    * 生命周期函数--监听页面加载

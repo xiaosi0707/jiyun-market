@@ -1,5 +1,8 @@
 //index.js
 //获取应用实例
+const app = getApp()
+
+
 import { NewsModel } from '../../models/news.js'
 import { TongzhiModel } from "../../models/tongzhi.js"
 import { YouhuiModel } from "../../models/youhui.js"
@@ -13,7 +16,7 @@ let zhengce = new ZhengceModel()
 
 
 
-const app = getApp()
+
 
 Page({
   data: {
@@ -99,7 +102,6 @@ Page({
     circular: true // 循环播放
   },
   tap:function(event){
-    console.log(event)
     let { id } = event.currentTarget
     if (id == "投诉建议"){
       console.log("Aa");
@@ -163,11 +165,11 @@ Page({
       if(res.list.data.length>3){
        res.list.data.length=3
       } 
-      console.log(res.list.data)
+      // console.log(res.list.data)
       this.setData({
         newsData:res.list.data
       })
-      console.log(this.data.newsData)
+      
     })
     // 集团通知
     tongzhi.getTongzhiList((res) => {
@@ -178,29 +180,28 @@ Page({
       this.setData({
         tongzhiData: res.list.list.data
       })
-      console.log(this.data.tongzhiData)
+      
     })
   // 优惠活动
     youhui.getYouhuiList((res)=>{
-      console.log(res.list.list.data)
       if (res.list.list.data.length>3){
         res.list.list.data.length=3
       }
       this.setData({
         youhuiData: res.list.list.data
       })
-      console.log(this.data.youhuiData)
+     
     })
     //政策制度
     zhengce.getZhengceList((res) => {
-      console.log(res.list.data)
+      // console.log(res.list.data)
       if (res.list.data.length > 3) {
         res.list.data.length = 3
       }
       this.setData({
         zhengceData: res.list.data
       })
-      console.log(this.data.zhengceData)
+     
     })
   }
 })

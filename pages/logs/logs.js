@@ -100,6 +100,7 @@ Page({
                 }
               })
               res.data.user = user;
+              res.data.tel = num
               wx.setStorage({
                 key: 'user',
                 data: res.data,

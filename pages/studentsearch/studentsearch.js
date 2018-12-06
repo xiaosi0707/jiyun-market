@@ -26,7 +26,6 @@ Page({
     })
   },
   onSearchList() { // 搜索
-    console.log(this.data.userName)
     let user = this.data.userName
     let reg = /^[\u4e00-\u9fa5]+$/
     user = user.replace(/(^\s+)|(\s+$)/g, "")
@@ -47,7 +46,7 @@ Page({
     } else if (!reg.test(user)) {
       this.setData({
         mge: [],
-        log: '请输入中文查询',
+        log: '请输入中文查询，不能含有字母、数字或非法字符',
         color: 'red'
       })
     } else if (reg.test(user) && user.length < 2) {
