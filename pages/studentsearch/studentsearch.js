@@ -12,7 +12,7 @@ Page({
     nameData: [] // 基本信息
 
   },
-  getName (e) {
+  getName (e) { // 获取文本框的内容
     let { value } = e.detail
     this.setData({
       userName: value
