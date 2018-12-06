@@ -3,9 +3,9 @@
   <view class='studentsearch-head'>
     <view class='head-left'>
       <icon class='iconfont icon-sousuo'></icon>
-      <input type='text' placeholder='请输入学生姓名' class='text'></input>
+      <input type='text' placeholder='请输入学生姓名' bindinput='getName' class='text'></input>
     </view>
-      <text class='head-right'>搜索</text>
+      <text bindtap='onSearchList' class='head-right'>搜索</text>
   </view>
   <view class='studentsearch-cont'>
     <!-- 基本信息 -->

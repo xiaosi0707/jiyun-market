@@ -70,13 +70,6 @@ class Request{
     let data = http.send("http://jy.haoyunyun.cn/studentapi","get",{page:p});
     return data;
   }
-  getOrgan(id){ //获取组织结构
-    let data = http.send("http://jy.haoyunyun.cn/api/qyjl","get",{
-      id:1,
-      type:5
-    });
-    return data;
-  }
   getDef(type,id){
     console.log(type);
     let data = null;
@@ -104,6 +97,41 @@ class Request{
       });
     }
     return data;
+  }
+  getOrgan(id,type) { //获取组织结构
+    var url = "";
+    switch(type){
+      case 5:
+        url = "http://jy.haoyunyun.cn/api/qyjl";
+        break;
+      case 4:
+        url = "http://jy.haoyunyun.cn/api/xb";
+        break;
+      case 3:
+        url = "http://jy.haoyunyun.cn/api/zb";
+        break;
+      case 2:
+        url = "http://jy.haoyunyun.cn/api/zsry";
+        break;
+    }
+    let data = http.send(url, "get", {
+      id: id,
+      type: type
+    });
+    return data;
+  } 
+  //在线查询
+  getSearchData(name) {
+    let data = http.send('http://47.92.39.32:8088/StudentService/GetStudentInfo/' + name, "get")
+    return data
+  }
+  getSearchList(name) {
+    let data = http.send('http://47.92.39.32:8088/StudentService/GetClassesInfo/' + name, "get")
+    return data
+  }
+  getSearchPrice(name) {
+    let data = http.send('http://47.92.39.32:8088/StudentService/GetPaymentsInfo/' + name, 'get')
+    return data
   }
 }
 export{Request}

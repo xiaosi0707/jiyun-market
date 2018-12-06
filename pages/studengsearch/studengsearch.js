@@ -1,39 +1,18 @@
-// pages/studentsearch/studentsearch.js
-
-import { Request } from '../../models/request.js'
-let http = new Request()
+// pages/studengsearch/studengsearch.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userName: '', // 姓名
-    nameData: [] // 基本信息
 
   },
-  getName (e) {
-    let { value } = e.detail
-    this.setData({
-      userName: value
-    })
-  },
-  onSearchList () { // 搜索
-    let user = this.data.userName
-    http.getSearchData(user).then(res=> {
-      console.log(res.data)
-      
-    })
-    http.getSearchList(user).then(res => {
-      console.log(res.data)
 
-    })
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
