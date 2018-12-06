@@ -43,7 +43,7 @@ view,icon,text{
   padding: 10rpx 40rpx;
 }
 .cont-text{
-  font-size:23rpx;
+  font-size:30rpx;
   line-height: 43rpx;
  }
  .cont-huji{

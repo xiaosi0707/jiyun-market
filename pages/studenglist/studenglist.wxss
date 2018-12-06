@@ -1,6 +1,9 @@
 view,icon,text,input{
   box-sizing: border-box;
 }
+text{
+  font-size: 30rpx;
+}
 .cont-txt{
   flex: 1;
   height: 100rpx;
@@ -78,13 +81,16 @@ view,icon,text,input{
 }
 .yubao{
   width: 100%;
-  line-height: 120rpx;
+  line-height: 100rpx;
   background: burlywood;
-  font-size: 40rpx;
+  font-size: 30rpx;
   border-radius: 10rpx 10rpx 0 0; 
   text-align: center;
   position: fixed;
   bottom: 0;
   left: 0;
   color: #fff;
+}
+.iconfont{
+  font-size: 40rpx;
 }

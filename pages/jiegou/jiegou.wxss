@@ -49,13 +49,13 @@ font-size: 27rpx;
 color: #999;
 }
 .text{
-font-size: 27rpx;
+font-size:30rpx;
 margin-left: 20rpx;
 height: 80rpx;
 width: 60%;
 }
 .head-right{
-font-size: 27rpx;
+font-size: 30rpx;
 color: #ff7a00;
 padding-left: 30rpx;
 }
@@ -63,7 +63,7 @@ padding-left: 30rpx;
   display:flex;
 }
 .ul view{
-  font-size:24rpx;
+  font-size:30rpx;
 }
 .ul:nth-child(1){
   background-color:#F5F5F5;

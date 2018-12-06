@@ -36,7 +36,7 @@ input{
   flex: 1;
   height: 100rpx;
   padding-left: 30rpx;
-  font-size: 27rpx;
+  font-size: 30rpx;
 }
 .cont .xuanze {
   font-size: 26rpx;

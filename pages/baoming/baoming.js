@@ -75,7 +75,6 @@ Page({
   },
   radioChange (e) { // 获取性别
     let { value } = e.detail
-    console.log(value)
     this.setData({
       sex: value
     })
@@ -83,6 +82,7 @@ Page({
   },
   //报名提交
   zhuce () {
+
     console.log(this.data.sex)
     let user = this.data.name
     let re = /^[\u4e00-\u9fa5]+$/ // 中文名字验证
@@ -132,7 +132,7 @@ Page({
           "zsls":this.data.teacher
         },
         success:(res=>{
-          // console.log(res)
+          
          if(res.status==100){
             wx.showToast({
               title: '报名成功',
@@ -141,12 +141,19 @@ Page({
               success:function(res){
                 console.log(res)
                setTimeout(() => {
+                 var pages = getCurrentPages(); // 当前页面
+                 var beforePage = pages[pages.length - 2]; // 前一个页面
+                 console.log("beforePage");
+                 console.log(beforePage);
                  wx.navigateBack({
-                   delta: 1
-                 }, 2000)
-               })
+                   success: function () {
+                     beforePage.onLoad(); // 执行前一个页面的onLoad方法
+                   }
+                 })
+                
+               }, 1500)
               }
-            })
+            }, 2000)
          }else{
            wx.showModal({
              title: '失败',

@@ -3,11 +3,12 @@
   <view class='studentsearch-head'>
     <view class='head-left'>
       <icon class='iconfont icon-sousuo'></icon>
-      <input type='text' placeholder='请输入学生姓名' bindinput='getName' class='text'></input>
+      <input type='text' bindfocus='onFocus' placeholder='请输入学生姓名' bindinput='getName' class='text'></input>
     </view>
       <text bindtap='onSearchList' class='head-right'>搜索</text>
   </view>
-  <view class='studentsearch-cont'>
+  <view class='length' style='color:{{ color }}'>{{ log }}</view>
+  <view class='studentsearch-cont' wx:for='{{mge}}' wx:key='index'>
     <!-- 基本信息 -->
     <view class='cont-jiben'>
       <text class='tiao jibenback'></text>
@@ -17,31 +18,31 @@
         <text class='mess1'>信</text>
         <text class='mess1'>息</text>
       </view>
-      <view class='mess-cont jibenback2'>
+      <view class='mess-cont jibenback2' wx:for='{{item.student_inform}}' wx:key='{{index}}'>
         <view class='mess-item'>
-          <text class='item-text'>姓名：小四</text>
-          <text class='item-text'>性别：男</text>
+          <text class='item-text'>姓名：{{item.StudentName}}</text>
+          <text class='item-text'>性别：{{item.StudentSex}}</text>
         </view>
         <view  class='mess-item'>
-          <text class='item-text'>学制：16个月</text>
-          <text class='item-text'>专业：新媒体</text>
+          <text class='item-text'>学制：{{item.StudentSchoolLenth}}</text>
+          <text class='item-text'>专业：{{item.StudentMajor}}</text>
         </view>
         <view class='mess-item'>
-          <text class='item-text'>当前状态：在线</text>
+          <text class='item-text'>当前状态：{{item.StudentStatu}}</text>
        </view>
          <view class='mess-item'>
-          <text class='item-text'>手机号：15213456789</text>
+          <text class='item-text'>手机号：{{item.StudentPhone}}</text>
        </view>
        <view class='mess-item'>
-          <text class='item-text'>身份证：15213456789</text>
+          <text class='item-text'>身份证：{{item.StudentIdCard}}</text>
        </view>
         
         <view class='mess-item'>
-           <text class='item-text address'>家庭地址：河南省安阳市安阳县</text>
+           <text class='item-text address'>家庭地址：{{item.StudentProvince}}{{item.StudentCity}}{{item.StudentCounty}}</text>
         </view>
         <view class='mess-item'>
         
-          <text class='item-text'>入学日期：2018-10-10</text>
+          <text class='item-text'>入学日期：{{item.StudentEnterDate}}</text>
         </view>
       </view>
     </view>
@@ -56,17 +57,17 @@
       </view>
       <view class='mess-cont jibenback2'>
         <view class='mess-item'>
-          <text class='item-text'>所属教学月：第10个月</text>
+          <text class='item-text'>所属教学月：{{item.The_class_inform[0].TeachingMonth}}</text>
         </view>
         <view  class='mess-item'>
-          <text class='item-text'>上课类型：正常升班</text>
+          <text class='item-text'>上课类型：{{item.The_class_inform[0].ClassType}}</text>
         </view>
         <view class='mess-item'>
-           <text class='item-text'>累计重修：0次</text>
+           <text class='item-text'>累计重修：{{item.The_class_inform[0].AccumulativeReoverTimes}}次</text>
         </view>
          <view class='mess-item'>
-          <text class='item-text'>班主任：马冬梅</text>
-          <text class='item-text'>班号：404</text>
+          <text class='item-text'>班主任：{{item.The_class_inform[0].Headmaster}}</text>
+          <text class='item-text'>班号：{{item.The_class_inform[0].TeachingMonth}}</text>
        </view>
       </view>
     </view>
@@ -81,31 +82,24 @@
       </view>
       <view class='mess-cont jibenback2'>
         <view class='mess-item'>
-          <text class='item-text'>应缴学费：2322162</text>
+          <text class='item-text'>应缴学费：{{item.Payment_inform[0].TuitionPayable}}</text>
         </view>
         <view class='mess-item'>
-          <text class='item-text'>应缴学费：201222</text>
+          <text class='item-text'>已缴学费：{{item.Payment_inform[0].TuitionPaid}}</text>
         </view>
         <view  class='mess-item'>
-          <text class='item-text'>欠缴学费：22222</text>
+          <text class='item-text'>欠缴学费：{{item.Payment_inform[0].TuitionUnPaid}}</text>
         </view>
         <view class='mess-item'>
-          <text class='item-text'>应缴住宿费：22326</text>
+          <text class='item-text'>应缴住宿费：{{item.Payment_inform[0].BoardingFeePayable}}</text>
         </view>
          <view class='mess-item'>
-          <text class='item-text'>已缴住宿费：22222</text>
+          <text class='item-text'>已缴住宿费：{{item.Payment_inform[0].BoardingFeePaid}}</text>
        </view>
         <view class='mess-item'>
-           <text class='item-text address'>欠缴住宿费：222222</text>
+           <text class='item-text address'>欠缴住宿费：{{item.Payment_inform[0].BoardingFeeUnPaid}}</text>
         </view>
-        <view class='mess-item'>
-          <text class='item-text'>入学日期：2018-10-10</text>
-        </view>
-      </view>
+         </view>
     </view>
-
-
   </view>
-
-
 </view>
