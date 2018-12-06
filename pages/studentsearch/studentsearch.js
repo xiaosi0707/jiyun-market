@@ -1,4 +1,7 @@
 // pages/studentsearch/studentsearch.js
+
+import { Request } from '../../models/request.js'
+let http = new Request()
 Page({
 
   /**
@@ -7,12 +10,14 @@ Page({
   data: {
 
   },
-
+  onSearchList () { // 搜索
+    http.getSearchData().then()
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**

@@ -135,9 +135,13 @@ Page({
       wx.navigateTo({
         url: '/pages/inform/list?title=' + id
       })
-    }
+    } else if (id == "在校查询") {
+      wx.navigateTo({
+        url: '/pages/studentsearch/studentsearch'
+      })
+    } 
    
-  },
+  }, 
   /**
   * 生命周期函数--监听页面加载
   */

@@ -26,13 +26,21 @@
           <text class='item-text'>学制：16个月</text>
           <text class='item-text'>专业：新媒体</text>
         </view>
+        <view class='mess-item'>
+          <text class='item-text'>当前状态：在线</text>
+       </view>
          <view class='mess-item'>
           <text class='item-text'>手机号：15213456789</text>
        </view>
+       <view class='mess-item'>
+          <text class='item-text'>身份证：15213456789</text>
+       </view>
+        
         <view class='mess-item'>
            <text class='item-text address'>家庭地址：河南省安阳市安阳县</text>
         </view>
         <view class='mess-item'>
+        
           <text class='item-text'>入学日期：2018-10-10</text>
         </view>
       </view>
