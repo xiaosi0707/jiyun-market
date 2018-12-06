@@ -1,3 +1,5 @@
+
+
 import { Request } from "../../models/request.js";
 let Api = new Request();
 Page({
@@ -58,5 +60,6 @@ Page({
     wx.navigateTo({
       url: '/pages/jiegou/jiegou?name=' + dataList.username + "&type=" + type + "&id=" + dataList.id,
     })
+
   }
 })

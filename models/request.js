@@ -119,7 +119,19 @@ class Request{
       type: type
     });
     return data;
+  } 
+  //在线查询
+  getSearchData(name) {
+    let data = http.send('http://47.92.39.32:8088/StudentService/GetStudentInfo/' + name, "get")
+    return data
   }
-  
+  getSearchList(name) {
+    let data = http.send('http://47.92.39.32:8088/StudentService/GetClassesInfo/' + name, "get")
+    return data
+  }
+  getSearchPrice(name) {
+    let data = http.send('http://47.92.39.32:8088/StudentService/GetPaymentsInfo/' + name, 'get')
+    return data
+  }
 }
 export{Request}
