@@ -1,8 +1,15 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/jiegou/jiegou",
     "pages/index/index",
     "pages/logs/logs",
+=======
+    "pages/index/index",
+    "pages/jiegou/jiegou",
+    "pages/logs/logs",
+    "pages/studentsearch/studentsearch",
+>>>>>>> 505217791bfe1ce66e72db7ee0b44ec18528f780
     "pages/baoming/baoming",
     "pages/studenglist/studenglist",
     "pages/studentsearch/studentsearch",
@@ -14,9 +21,9 @@
     "pages/policyDetail/detail",
     "pages/complainDetail/detail",
     "pages/newsList/list",
-    "pages/inform/list",
     "pages/activity/list",
     "pages/policy/list",
+    "pages/inform/list",
     "pages/complain/list"
   ],
   "window": {
