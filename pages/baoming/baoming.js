@@ -271,35 +271,34 @@ Page({
             xueli:e.target.id,
             xuelinum:1
           })
-          console.log(that.data.xuelinum)
         }else if(res.tapIndex==1){
           e.target.id="初中"
           that.setData({
             xueli: e.target.id,
             xuelinum: 2
           })
-          console.log(that.data.xuelinum)
+         
         }else if(res.tapIndex==2){
           e.target.id='高中'
           that.setData({
             xueli: e.target.id,
             xuelinum: 3
           })
-          console.log(that.data.xuelinum)
+         
         }else if(res.tapIndex==3){
           e.target.id='大学'
           that.setData({
             xueli: e.target.id,
             xuelinum: 4
           })
-          console.log(that.data.xuelinum)
+          
         }else{
           e.target.id='其它'
           that.setData({
             xueli: e.target.id,
             xuelinum: 5
           })
-          console.log(that.data.xuelinum)
+          
         }
       }
     })
@@ -317,7 +316,7 @@ Page({
       success: function(res) {
         console.log(res)
         _this.setData({
-          teacher: res.data
+          teacher: res.data.user
         })
       },
     })
