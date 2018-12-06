@@ -115,14 +115,14 @@ Page({
       wx.navigateTo({
         url: '/pages/studenglist/studenglist',
       })
-<<<<<<< HEAD
     }else if(id == "在校查询"){
       wx.navigateTo({
         url: '/pages/studentsearch/studentsearch',
       })
     }else if(id == "组织结构"){
-      
-=======
+      wx.navigateTo({
+        url: '/pages/jiegou/jiegou'
+      })
     }else if(id == "集团新闻"){
       wx.navigateTo({
         url:'/pages/newsList/list?title='+id
@@ -143,7 +143,6 @@ Page({
       wx.navigateTo({
         url: '/pages/inform/list?title=' + id
       })
->>>>>>> 505217791bfe1ce66e72db7ee0b44ec18528f780
     }
    
   },
@@ -158,7 +157,6 @@ Page({
     })
      // 集团新闻
     news.getNewsList((res) => {
-      console.log(res)
       if(res.list.data.length>3){
        res.list.data.length=3
       } 
