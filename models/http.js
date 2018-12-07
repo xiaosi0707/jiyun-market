@@ -1,6 +1,7 @@
 class Http{
   send(url,type,params){  //promise封装请求
      return new Promise((success, err)=>{
+       
         wx.request({
           url:url,
           method:type,
@@ -8,7 +9,8 @@ class Http{
           success:(res)=>{
             success(res);
           },
-          error:(res)=>{
+          fail:(res)=>{
+            console.log('出错了')
             err(res);
           }
         })

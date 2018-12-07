@@ -120,6 +120,7 @@ Page({
       })
     } else if (this.data.name && this.data.sex && myreg.test(this.data.tel) && userCard.test(this.data.card) && this.data.xueli && this.data.teacher){
       // console.log("studentadd")
+      wx.showLoading({ title: '提交中...', })
       http.request({
         url:'studentadd',
         data:{
@@ -132,35 +133,38 @@ Page({
           "zsls":this.data.teacher
         },
         success:(res=>{
-          
+          wx.hideLoading();
          if(res.status==100){
             wx.showToast({
               title: '报名成功',
               icon:'success',
-              duration:100,
-              success:function(res){
-                console.log(res)
-               setTimeout(() => {
-                 var pages = getCurrentPages(); // 当前页面
-                 var beforePage = pages[pages.length - 2]; // 前一个页面
-                 console.log("beforePage");
-                 console.log(beforePage);
-                 wx.navigateBack({
-                   success: function () {
-                     beforePage.onLoad(); // 执行前一个页面的onLoad方法
-                   }
-                 })
-                
-               }, 1500)
-              }
-            }, 2000)
+              duration:1500,
+            })
+           setTimeout(() => {
+             var pages = getCurrentPages(); // 当前页面
+             var beforePage = pages[pages.length - 2]; // 前一个页面
+             console.log("beforePage");
+             console.log(beforePage);
+             wx.navigateBack({
+               success: function () {
+                 beforePage.onLoad(); // 执行前一个页面的onLoad方法
+               }
+             })
+           }, 1500)
          }else{
            wx.showModal({
              title: '失败',
              content: '请重新输入信息，并提交报名',
            })
          }
-        })
+        }),
+        fail: () => {
+          wx.hideLoading();
+          wx.showModal({
+            title: '失败',
+            content: '请重新输入信息，并提交报名',
+          })
+        }
       })
     }
   },

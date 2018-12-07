@@ -20,6 +20,7 @@ let zhengce = new ZhengceModel()
 
 Page({
   data: {
+  
     navlist:[
       {
         title: '集团新闻',
@@ -155,6 +156,8 @@ Page({
   * 生命周期函数--监听页面加载
   */
   onLoad: function (options) {
+    getCurrentPages()[0].title = '哈哈'
+    console.log(getCurrentPages())
     var user = wx.getStorageSync("user")
     this.setData({
       title: options.title,
