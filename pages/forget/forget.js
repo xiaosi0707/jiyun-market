@@ -86,7 +86,26 @@ Page({
                    title: "提示",
                    content: res.data.msg
                  })
+                 if (res.data.status === 200) {
+                   setTimeout(() => {
+                     wx.navigateBack({
+                       delta: 1
+                      })
+                   }, 800)
+                 }
                }, 2000)
+              }).catch (res => {
+                console.log(res)
+                setTimeout(() => {
+                  _this.setData({
+                    disabled: false
+                  })
+                  wx.hideToast()
+                  wx.showModal({
+                    title: "失败",
+                    content: "提交失败，请检测输入是否有误"
+                  })
+                }, 2000)
               })
             }
           })
