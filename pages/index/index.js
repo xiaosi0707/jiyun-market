@@ -15,11 +15,7 @@ let youhui = new YouhuiModel()
 let zhengce = new ZhengceModel()
 Page({
   data: {
-<<<<<<< HEAD
     roolList:[],
-=======
-  
->>>>>>> af1761114cb0c277e057dfccb14400aefb6c7f5a
     navlist:[
       {
         arr:[],
@@ -131,7 +127,7 @@ Page({
       wx.navigateTo({
         url: '/pages/studenglist/studenglist',
       })
-    }else if(id == "在校生查询"){
+    } else if (id == "在校生信息查询"){
       wx.navigateTo({
         url: '/pages/studentsearch/studentsearch',
       })

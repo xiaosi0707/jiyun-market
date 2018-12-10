@@ -118,3 +118,7 @@ button{
   color: orangered;
   padding-left: 90rpx;
 }
+.forget{
+font-size: 30rpx;
+color: orangered; 
+}

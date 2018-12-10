@@ -150,5 +150,15 @@ class Request{
     let data = http.send("http://www.uu5u.cn/api/roll", "get");
     return data;
   }
+  //修改密码
+  setPass(card,wornPass,newPass,openid){
+    let data = http.send("http://www.uu5u.cn/api/setpass","post",{
+      wornPass: wornPass,
+      newPass:newPass,
+      card:card,
+      openid:openid
+    });
+    return data;    
+  }
 }
 export{Request}

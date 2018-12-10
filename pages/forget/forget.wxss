@@ -1,0 +1,43 @@
+view,text,input{
+box-sizing: border-box;
+}
+.box{
+width: 100vw;
+height: 100vh;
+padding: 45rpx 25rpx;
+background: #edebee;
+}
+.body{
+width: 100%;
+border: 1.5px solid #bfbdc0;
+border-radius: 30rpx; 
+background: #fff;
+}
+.cont{
+width: 100%;
+display: flex;
+padding: 40rpx 0rpx;
+border-bottom: 1px solid #e5e5e5;
+
+}
+.cont text{
+width: 170rpx;
+font-size: 32rpx;
+text-align: center;
+border-right: 1px solid #dfdfdf;
+}
+.cont input{
+flex: 1;
+font-size: 32rpx;
+padding-left: 30rpx;
+}
+.next{
+width: 100%;
+line-height: 95rpx;
+background: #26a6f0;
+border-radius: 15rpx;
+color: #fff;
+text-align: center;
+margin-top: 40rpx;
+
+}

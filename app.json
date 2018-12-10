@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/forget/forget",
     "pages/logs/logs",
     "pages/index/index",
     "pages/jiegou/search",
@@ -21,8 +22,8 @@
     "pages/complain/list"
   ],
   "window": {
-    "backgroundTextStyle":"dark",
-    "backgroundColor":"#F8F8F8",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#F8F8F8",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "欢迎来到积云学院",
     "navigationBarTextStyle": "black",
