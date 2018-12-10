@@ -11,36 +11,48 @@
       </swiper-item>
     </block>
   </swiper>
+  <!-- 滚动信息 -->
+
+  <swiper style = 'height:40rpx;' vertical = "true" circular='{{ circular }}' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key='index'>
+      <swiper-item class='scrollmess' wx:for = "{{roolList}}" wx:for-item = "item">
+        <view class='scroll-tongzhi'><icon class='iconfont icon-tongzhi icontongzhi'></icon>重要通知：</view>
+        <view class='scroll-cont'>{{item.content}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+
  <!--导航  -->
   <view class='nav'>
-    <view class='nav-item' wx:for="{{navlist}}" wx:key="index" bindtap='tap' id = "{{item.title}}">
+    <view class='nav-item' wx:for="{{navlist}}" wx:key="index" bindtap='tap' id = "{{item.title}}" data-index = "{{index}}">
      <icon class="'iconfont'+{{item.icon}} nav-pic"></icon><text class='title'>{{item.title}}</text>
+     <view class='new' wx:if = "{{item.action == 1}}">新</view>
     </view>
    
   </view>
 <!--集团通知 集团新闻 -->
 <view class='jituan'>
   <view class='jituan-l' style='background:#f7774a'>
-  <navigator class='navtiao2'url='../inform/list?title=集团通知'>
+  <navigator class='navtiao2' url='../jiuyegood/jiuyegood'>
     <view class='l-cont'>
-       <text class='l-cont-text' wx:for="{{tongzhiData}}" wx:key="index">{{item.bt}}</text>
+       <text class='l-cont-text' wx:for="{{arr}}" wx:key="index">{{item.sname}} - 薪资 {{item.jsalary}}</text>
        <icon class='iconfont icon-iconfontgengduo'></icon>
     </view>
     <view class='l-pic'>
       <icon class='iconfont icon-tongzhi'></icon>
-      <text class='l-pic-title'>集团通知</text>
+      <text class='l-pic-title'>就业喜报</text>
     </view>
     </navigator>
   </view>
   <view class='jituan-r' style='background:#c066a6'>
-   <navigator url='../newsList/list?title=集团新闻' class='navtiao2'>
+   <navigator url='../inform/list?title=集团通知' class='navtiao2'>
       <view class='r-cont'>
-        <text class='r-cont-text'  wx:for="{{newsData}}" wx:key="index">{{item.bt}}</text>
+        <text class='r-cont-text'  wx:for="{{tongzhiData}}" wx:key="index">{{item.bt}}</text>
         <icon class='iconfont icon-iconfontgengduo'></icon>
       </view>
       <view class='r-pic'>
           <icon class='iconfont icon-xinwen'></icon>
-          <text class='r-pic-title'>集团新闻</text>
+          <text class='r-pic-title'>集团通知</text>
         </view>
     </navigator>
   </view>
@@ -60,14 +72,16 @@
    </navigator>
    </view>
   <view class='jituan-l jituan2-l' style='background:#f5ad09'>
-    <navigator class='navtiao2' url='../policy/list?title=政策制度'>
+    <navigator class='navtiao2' url='./index'>
       <view class='l-cont'>
-        <text class='l-cont-text' wx:for="{{zhengceData}}" wx:key="index">{{item.bt}}</text>
+        <text class='l-cont-text'>姓名：小四 排名：第一</text>
+        <text class='l-cont-text'>姓名：小四 排名：第一</text>
+        <text class='l-cont-text'>姓名：小四 排名：第一</text>
         <icon class='iconfont icon-iconfontgengduo'></icon>
       </view>
       <view class='l-pic'>
           <icon class='iconfont icon-guizhangzhidu'></icon>
-          <text class='l-pic-title'>政策制度</text>
+          <text class='l-pic-title'>业绩排名</text>
         </view>
     </navigator>
   </view>

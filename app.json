@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/logs/logs",
     "pages/index/index",
+    "pages/jiegou/search",
     "pages/studentsearch/studentsearch",
     "pages/jiegou/jiegou",
-    "pages/logs/logs",
     "pages/baoming/baoming",
     "pages/studenglist/studenglist",
     "pages/jiuyesearch/jiuyesearch",
