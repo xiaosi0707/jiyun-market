@@ -92,7 +92,7 @@ Page({
                 })
               } else {
                 wx.request({
-                  method: 'get',
+                  method: 'post',
                   url: 'http://www.uu5u.cn/api/login',
                   data: { 
                     'username': user, 

@@ -134,7 +134,7 @@ class Request{
   }
   //搜索数据
   search_teacher(value){
-    let data = http.send("http://www.uu5u.cn/api/search","get",{
+    let data = http.send("http://www.uu5u.cn/api/search","post",{
       phome:"13051976351",
       name:value
     });
