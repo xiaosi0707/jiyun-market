@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/logs/logs",
     "pages/index/index",
+    "pages/logs/logs",
+    "pages/jiegou/search",
     "pages/studentsearch/studentsearch",
     "pages/jiegou/jiegou",
     "pages/baoming/baoming",

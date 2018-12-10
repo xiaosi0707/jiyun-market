@@ -7,7 +7,8 @@ Page({
     text:"",
     dataList:[],
     upLevel:null,
-    upName:""
+    upName:"",
+    value:""
 
   },
   click(ev){
@@ -70,10 +71,17 @@ Page({
     wx.navigateTo({
       url: '/pages/jiegou/jiegou?name=' + dataList.username + "&type=" + type + "&id=" + dataList.id,
     })
-
+  },
+  onblurUser(ev){
+    this.setData({
+      value: ev.detail.value
+    })
   },
   search(){
-    Api.search_teacher().then(res=>{
+    let value = this.data.value;
+    var user = wx.getStorageSync("user");
+    console.log(user);
+    Api.search_teacher(value,user.phome).then(res=>{
       console.log(res);
     })
   }

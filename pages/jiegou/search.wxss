@@ -1,0 +1,29 @@
+view,text,icon{
+box-sizing: border-box;
+}
+.zhiwei{
+padding: 20rpx 60rpx;
+margin-top: 30rpx; 
+}
+text{
+font-size: 30rpx;
+line-height: 100rpx;
+padding-left: 15rpx; 
+}
+.tr{
+width: 100%;
+padding:20rpx 40rpx;
+border-radius: 30rpx;
+border-left: 5px solid #f1f1f1;
+border-top:1.5px solid #f1f1f1;
+margin-bottom:60rpx; 
+}
+.top{
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+.iconfont{
+font-size: 40rpx;
+color: #5ccafb;
+}

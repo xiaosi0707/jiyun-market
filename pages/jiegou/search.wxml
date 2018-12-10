@@ -1,0 +1,18 @@
+<view class='zhiwei'>
+<view class='tr'>
+<view class='top'>
+<view>
+<icon class='iconfont icon-shoujihao'></icon>
+<text>姓名：小四</text>
+</view>
+<view>
+<icon class='iconfont icon-xingming1'></icon> 
+<text>职务：区域经理</text>
+</view>
+</view>
+<view>
+<icon class='iconfont icon-guizhangzhidu'></icon>
+<text>手机号：12345678910</text>
+</view>
+</view>
+</view>

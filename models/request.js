@@ -71,7 +71,6 @@ class Request{
     return data;
   }
   getDef(type,id){
-    console.log(type);
     let data = null;
     if (type == "集团通知"){ //通知详情
       data = http.send("http://jy.haoyunyun.cn/api/msg","get",{
@@ -134,11 +133,21 @@ class Request{
     return data
   }
   //搜索数据
-  search_teacher(){
-    let data = http.send("http://jy.haoyunyun.cn/api/search","post",{
+  search_teacher(value){
+    let data = http.send("http://www.uu5u.cn/api/search","get",{
       phome:"13051976351",
-      name:"邵聪聪"
+      name:value
     });
+    return data;
+  }
+  //获取最后一条的时间
+  getTimes(){
+    let data = http.send("http://www.uu5u.cn/api/getTimes","get");
+    return data;
+  }
+  //获取轮播滚动
+  getroll(){
+    let data = http.send("http://www.uu5u.cn/api/roll", "get");
     return data;
   }
 }

@@ -2,7 +2,7 @@
 <view class='studentsearch-head'>
 <view class='head-left'>
 <icon class='iconfont icon-sousuo'></icon>
-<input type='text' placeholder='请输入姓名' class='text'></input>
+<input type='text' placeholder='请输入姓名' class='text' bindblur='onblurUser'></input>
 </view>
 <text class='head-right' bindtap='search'>搜索</text>
 </view>

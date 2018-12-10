@@ -1,7 +1,6 @@
 {
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",
-  "navigationBarTitleText": "在校生查询",
-  "backgroundColor": "#eeeeee",
+  "navigationBarTitleText": "积云职务人员列表",
   "navigationBarTextStyle": "black"
 }
