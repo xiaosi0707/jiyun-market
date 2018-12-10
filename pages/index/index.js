@@ -15,7 +15,11 @@ let youhui = new YouhuiModel()
 let zhengce = new ZhengceModel()
 Page({
   data: {
+<<<<<<< HEAD
     roolList:[],
+=======
+  
+>>>>>>> af1761114cb0c277e057dfccb14400aefb6c7f5a
     navlist:[
       {
         arr:[],

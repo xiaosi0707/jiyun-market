@@ -19,6 +19,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    
     studeng.getstudengDataList((res) => {
       console.log(res)//有next_page_url
       this.setData({
