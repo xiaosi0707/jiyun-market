@@ -39,7 +39,7 @@ Page({
         icon: 'icon-main-'
       },
       {
-        title: '就业利好',
+        title: '就业喜宝',
         icon: 'icon-yeji'
       },
       {
