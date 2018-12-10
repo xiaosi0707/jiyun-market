@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/mainliuyan/mainliuyan",
+    "pages/complain/list",
     "pages/logs/logs",
     "pages/forget/forget",
-    "pages/index/index",
     "pages/jiegou/search",
     "pages/studentsearch/studentsearch",
     "pages/jiegou/jiegou",
@@ -18,8 +20,7 @@
     "pages/newsList/list",
     "pages/activity/list",
     "pages/policy/list",
-    "pages/inform/list",
-    "pages/complain/list"
+    "pages/inform/list"
   ],
   "window": {
     "backgroundTextStyle": "dark",

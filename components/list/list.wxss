@@ -9,8 +9,14 @@
 .weui-cell__ft_in-access{
   margin-left: 30rpx; 
 }
-.bigtitle{
+.list-head{
+  display: flex;
   width: 100%;
+  justify-content: space-between;
+  padding-right: 20rpx;
+  align-items: center; 
+}
+.bigtitle{
   line-height: 100rpx;
   color: #e64340;
   font-size: 40rpx;
@@ -48,5 +54,8 @@ weui-cells_after-title{
   color: #b3b3b3;
 }
 .weui-cells{
+  font-size: 30rpx;
+}
+.mainliuyan{
   font-size: 30rpx;
 }

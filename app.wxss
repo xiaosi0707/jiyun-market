@@ -1,6 +1,9 @@
 /**app.wxss**/
 @import "./font_941695_hc2wszu8zmv/iconfont";
 @import "./weui.wxss";
+view,text,input,button,textarea,image{
+  box-sizing: border-box;
+}
 .container {
   height: 100%;
   display: flex;

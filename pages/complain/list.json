@@ -5,6 +5,7 @@
   "navigationBarTextStyle": "black",
   "usingComponents": {
     "component-list": "/components/list/list",
-    "component-mask": "/components/loading/index"
+    "component-mask": "/components/loading/index",
+    "components-liuyan":"/components/liuyan/liuyan"
   }
 }

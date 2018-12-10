@@ -13,7 +13,6 @@ class HTTP{
         "content-type": "application/json",
       },
       success: (res) => {
-        console.log(res)
         params.success(res.data)
       }
     })

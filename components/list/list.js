@@ -7,15 +7,16 @@ Component({
     data:Object,
     title:String,
     url:String,
+    hide: Boolean
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-
+    
   },
-
+  
   /**
    * 组件的方法列表
    */
@@ -27,6 +28,9 @@ Component({
       wx.navigateTo({
         url: this.properties.url + 'detail?id=' + id + '&title=' + this.properties.title,
       })
+    },
+    suremess() {
+      console.log(1111)
     }
   }
 })

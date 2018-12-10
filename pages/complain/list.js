@@ -12,13 +12,19 @@ Page({
     data:[],  
     title:'',
     page:1,
-    loading:false
+    loading:false,
+    hide: false
   },
   onLoad: function (options){
     this.setData({
       title: options.title,
       loading:true
     })
+    if (options.title == '投诉建议') {
+      this.setData({
+        hide: true
+      })
+    }
     Api.complain(0).then(res => { //首次加载
       Class.loadData(this, res.data.list.data);
     })

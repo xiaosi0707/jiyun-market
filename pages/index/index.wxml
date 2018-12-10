@@ -17,7 +17,6 @@
     <view class='index-swiper'>
       <swiper style = 'height:40rpx;' vertical = "true" circular='{{ circular }}' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
         <block wx:for="{{imgUrls}}" wx:key='index'>
-           
           <swiper-item class='scrollmess' wx:for = "{{roolList}}" wx:for-item = "item">
             <view class='scroll-cont'>{{item.content}}</view>
           </swiper-item>

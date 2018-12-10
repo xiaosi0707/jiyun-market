@@ -10,7 +10,7 @@ class Http{
             success(res);
           },
           fail:(res)=>{
-            console.log('出错了')
+            console.log(res)
             err(res);
           }
         })
