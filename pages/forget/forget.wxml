@@ -1,0 +1,21 @@
+<view class='box'>
+  <view class='body'>
+    <view class='cont'>
+      <text>身份证</text>
+      <input placeholder='请输入身份证' type='idcard' maxlength='18' bindblur='oncard'></input>
+    </view>
+    <view class='cont'>
+      <text>旧密码</text>
+      <input placeholder='请输入旧密码' bindblur='wornPass'  type='password'></input>
+    </view>
+    <view class='cont'>
+      <text>新密码</text>
+      <input placeholder='请输入新密码' bindblur='newPass' type='password'></input>
+    </view>
+    <view class='cont'>
+      <text>确认密码</text>
+      <input placeholder='请确认密码' bindblur='confirm' type='password'></input>
+    </view>
+  </view>
+  <view class='next'><button disabled="{{ disabled }}" bindtap='commit'>提交</button></view> 
+</view>

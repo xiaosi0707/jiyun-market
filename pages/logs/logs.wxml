@@ -8,7 +8,7 @@
         <view class='user'>
           <icon class='iconfont icon-xingming'></icon>
           <input type='text' placeholder='请输入姓名' 
-              bindfocus='onfocusName' bindblur='onblurName' >
+              bindfocus='onfocusName' bindblur='onblurName'>
           </input>
          </view>
          <view class='box' style='{{ Border }}'></view>
@@ -32,6 +32,7 @@
          <view class='login-msg'>{{ logs }}</view>
           <button bindtap='onlogin'>登 录</button>
           <view class='tongyi'>已阅读并同意《积云用户协议》</view>
+          <navigator url='../forget/forget' class='tongyi forget'>修改密码</navigator> 
       </view>
     </view>
   </view>

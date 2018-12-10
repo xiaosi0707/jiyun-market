@@ -127,7 +127,7 @@ Page({
       wx.navigateTo({
         url: '/pages/studenglist/studenglist',
       })
-    }else if(id == "在校生查询"){
+    } else if (id == "在校生信息查询"){
       wx.navigateTo({
         url: '/pages/studentsearch/studentsearch',
       })
