@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/logs/logs",
     "pages/index/index",
     "pages/mainliuyan/mainliuyan",
     "pages/complain/list",
-    "pages/logs/logs",
     "pages/forget/forget",
     "pages/jiegou/search",
     "pages/studentsearch/studentsearch",
