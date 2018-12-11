@@ -1,0 +1,22 @@
+.mainliuyan{
+  width: 100%;
+  padding: 50rpx;
+}
+.mainliuyan-cont{
+  width: 100%;
+  padding: 20rpx 0rpx;
+  border-top: 1px solid #f1f1f1; 
+  margin: 15rpx 0;
+}
+.liuyancont{
+  font-size: 30rpx;
+  display: block;
+  line-height: 50rpx;
+}
+.liuyantime{
+  font-size: 25rpx;
+  color: #888;
+  display: block;
+  text-align: right;
+  line-height: 80rpx;
+}

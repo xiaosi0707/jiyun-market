@@ -1,0 +1,8 @@
+<view>
+<view class='textarea' bindtap='onShow'>我要留言</view>
+    <view class='messcont' wx:if='{{ hide }}'>
+      <view class='messcont-head'><text>留言人：<text>{{ name }}</text></text><text class='off' bindtap='onNO' ></text></view>
+      <textarea class='messcont-body' focus='{{ hide }}' bindinput='onValue'></textarea>
+      <button class='messcont-btn' bindtap='onForm'>提交</button>
+    </view>
+</view>
